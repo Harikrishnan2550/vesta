@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="100%" height="100%">
+  <!-- Soaring Seagull Silhouette Top Right -->
+  <g transform="translate(140, 10)">
+    <path d="M 0 35 C 45 42, 90 28, 125 0 C 130 15, 140 28, 155 35 C 175 42, 210 32, 280 0 C 230 40, 185 58, 150 56 C 145 60, 140 68, 142 74 C 130 68, 118 64, 105 64 C 65 64, 30 52, 0 35 Z" fill="currentColor" />
+  </g>
+
+  <!-- THE SEAGULL Typography -->
+  <g transform="translate(50, 45)">
+    <!-- THE -->
+    <text x="5" y="32" font-family="'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="28" letter-spacing="0.06em" fill="#1572A1">THE</text>
+    <!-- SEAGULL -->
+    <text x="0" y="85" font-family="'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="64" letter-spacing="0.04em" fill="#1572A1">SEAGULL</text>
+  </g>
+
+  <!-- Divider Line Top -->
+  <line x1="60" y1="150" x2="160" y2="150" stroke="currentColor" stroke-width="2" />
+  
+  <!-- CRABS & FISH -->
+  <text x="260" y="156" text-anchor="middle" font-family="'Montserrat', 'Inter', sans-serif" font-weight="800" font-size="20" letter-spacing="0.22em" fill="currentColor">CRABS &amp; FISH</text>
+  
+  <!-- Divider Line Right -->
+  <line x1="360" y1="150" x2="460" y2="150" stroke="currentColor" stroke-width="2" />
+
+  <!-- Subtitle Line Bottom -->
+  <line x1="60" y1="182" x2="130" y2="182" stroke="currentColor" stroke-width="1.2" />
+  <text x="260" y="186" text-anchor="middle" font-family="'Georgia', 'Times New Roman', 'Playfair Display', cursive, serif" font-style="italic" font-weight="500" font-size="21" letter-spacing="0.05em" fill="currentColor">a vesta future concern</text>
+  <line x1="390" y1="182" x2="460" y2="182" stroke="currentColor" stroke-width="1.2" />
+</svg>
