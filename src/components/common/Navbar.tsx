@@ -97,7 +97,7 @@ export const Navbar: React.FC = () => {
         borderBottom: 'none',
         backdropFilter: 'none',
         WebkitBackdropFilter: 'none',
-        padding: '0 28px',
+        padding: '0 clamp(14px, 3vw, 28px)',
         pointerEvents: 'none',
         transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
       }}
@@ -508,8 +508,10 @@ export const Navbar: React.FC = () => {
           style={{
             position: 'absolute',
             top: 'calc(100% + 14px)',
-            left: '28px',
-            right: '28px',
+            left: 'clamp(14px, 3vw, 28px)',
+            right: 'clamp(14px, 3vw, 28px)',
+            maxHeight: 'calc(100vh - 110px)',
+            overflowY: 'auto',
             backgroundColor: '#FFFFFF',
             borderRadius: '24px',
             border: '1px solid rgba(245, 166, 35, 0.4)',

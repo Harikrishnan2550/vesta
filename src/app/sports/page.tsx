@@ -157,13 +157,13 @@ export default function SportsPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '56px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+              gap: 'clamp(32px, 5vw, 56px)',
               alignItems: 'center',
             }}
           >
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', flexWrap: 'wrap' }}>
                 <span
                   style={{
                     backgroundColor: 'rgba(245, 166, 35, 0.15)',
@@ -249,7 +249,7 @@ export default function SportsPage() {
             <div
               style={{
                 position: 'relative',
-                height: '460px',
+                height: 'clamp(280px, 42vw, 460px)',
                 borderRadius: '18px',
                 overflow: 'hidden',
                 border: '1px solid rgba(245, 166, 35, 0.35)',
@@ -309,8 +309,8 @@ export default function SportsPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '56px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+              gap: 'clamp(32px, 5vw, 56px)',
               alignItems: 'center',
             }}
           >
@@ -367,7 +367,7 @@ export default function SportsPage() {
                 backgroundColor: '#16161D',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '18px',
-                padding: '36px 28px',
+                padding: 'clamp(24px, 4vw, 36px) clamp(18px, 3vw, 28px)',
                 boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
               }}
             >
@@ -476,8 +476,8 @@ export default function SportsPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '28px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: '24px',
             }}
           >
             {keyFeatures.map((feat, idx) => {
@@ -490,7 +490,7 @@ export default function SportsPage() {
                     backgroundColor: '#121216',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: '16px',
-                    padding: '32px 26px',
+                    padding: 'clamp(24px, 3vw, 32px) clamp(18px, 2.5vw, 26px)',
                     display: 'flex',
                     flexDirection: 'column',
                   }}
@@ -562,8 +562,8 @@ export default function SportsPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '28px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: '24px',
             }}
           >
             {ourSegments.map((seg) => (
@@ -574,7 +574,7 @@ export default function SportsPage() {
                   backgroundColor: '#16161D',
                   border: '1px solid rgba(255, 255, 255, 0.08)',
                   borderRadius: '16px',
-                  padding: '32px 26px',
+                  padding: 'clamp(24px, 3vw, 32px) clamp(18px, 2.5vw, 26px)',
                   position: 'relative',
                   overflow: 'hidden',
                 }}
@@ -651,7 +651,7 @@ export default function SportsPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
               gap: '24px',
               marginBottom: '56px',
             }}
@@ -666,7 +666,7 @@ export default function SportsPage() {
                     backgroundColor: '#121216',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: '14px',
-                    padding: '28px 24px',
+                    padding: 'clamp(20px, 2.5vw, 28px) clamp(16px, 2vw, 24px)',
                     display: 'flex',
                     flexDirection: 'column',
                   }}
@@ -719,7 +719,7 @@ export default function SportsPage() {
               backgroundColor: '#16161D',
               border: '1px solid rgba(255, 255, 255, 0.08)',
               borderRadius: '18px',
-              padding: '36px 30px',
+              padding: 'clamp(24px, 3vw, 36px) clamp(18px, 2.5vw, 30px)',
             }}
           >
             <div
@@ -739,7 +739,7 @@ export default function SportsPage() {
             <h3
               style={{
                 textAlign: 'center',
-                fontSize: '1.35rem',
+                fontSize: 'clamp(1.15rem, 2vw, 1.35rem)',
                 color: '#FFFFFF',
                 marginBottom: '32px',
               }}
@@ -750,7 +750,7 @@ export default function SportsPage() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
                 gap: '20px',
               }}
             >
@@ -814,10 +814,10 @@ export default function SportsPage() {
               backgroundColor: '#16161D',
               border: '1px solid rgba(245, 166, 35, 0.3)',
               borderRadius: '20px',
-              padding: 'clamp(36px, 4vw, 56px)',
+              padding: 'clamp(28px, 4vw, 56px)',
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '40px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+              gap: 'clamp(24px, 4vw, 40px)',
               alignItems: 'center',
             }}
           >

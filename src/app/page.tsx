@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { siteConfig, getWhatsAppLink } from '@/config/site';
@@ -28,6 +28,25 @@ import { WhatsAppIcon } from '@/components/common/WhatsAppIcon';
 export default function HomePage() {
   const [activeDivIdx, setActiveDivIdx] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);
+  const pillarRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
+
+  const handleSelectSector = (idx: number, isDirectUserAction = false) => {
+    setActiveDivIdx(idx);
+    if (isDirectUserAction && typeof window !== 'undefined' && window.innerWidth < 768) {
+      setTimeout(() => {
+        const activeEl = pillarRefs.current[idx];
+        if (activeEl) {
+          const rect = activeEl.getBoundingClientRect();
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const targetY = scrollTop + rect.top - Math.max(16, (window.innerHeight - rect.height) / 2);
+          window.scrollTo({
+            top: Math.max(0, targetY),
+            behavior: 'smooth',
+          });
+        }
+      }, 120);
+    }
+  };
 
   const SECTORS = [
     {
@@ -93,7 +112,8 @@ export default function HomePage() {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setActiveDivIdx((curr) => (curr - 1 + SECTORS.length) % SECTORS.length);
+              const prevIdx = (activeDivIdx - 1 + SECTORS.length) % SECTORS.length;
+              handleSelectSector(prevIdx, true);
             }}
             className="hero-nav-arrow-btn"
             aria-label="Previous Section"
@@ -113,7 +133,8 @@ export default function HomePage() {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setActiveDivIdx((curr) => (curr + 1) % SECTORS.length);
+              const nextIdx = (activeDivIdx + 1) % SECTORS.length;
+              handleSelectSector(nextIdx, true);
             }}
             className="hero-nav-arrow-btn"
             aria-label="Next Section"
@@ -131,8 +152,11 @@ export default function HomePage() {
             return (
               <div
                 key={sector.id}
-                onClick={() => setActiveDivIdx(index)}
-                onMouseEnter={() => setActiveDivIdx(index)}
+                ref={(el) => {
+                  pillarRefs.current[index] = el;
+                }}
+                onClick={() => handleSelectSector(index, true)}
+                onMouseEnter={() => handleSelectSector(index, false)}
                 className={`hero-pillar-item ${isActive ? 'is-active' : ''}`}
                 style={{
                   flex: isActive ? '5.5 1 0%' : '1.8 1 0%',
@@ -417,8 +441,8 @@ export default function HomePage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-              gap: '32px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+              gap: 'clamp(20px, 3vw, 32px)',
             }}
           >
             {/* Division 1: Builders & Developers */}
@@ -514,8 +538,8 @@ export default function HomePage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-              gap: '24px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))',
+              gap: 'clamp(16px, 2.5vw, 24px)',
             }}
           >
             {siteConfig.presence.map((loc, idx) => (

@@ -221,13 +221,13 @@ export default function ConstructionPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '56px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+              gap: 'clamp(28px, 4vw, 56px)',
               alignItems: 'center',
             }}
           >
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', flexWrap: 'wrap' }}>
                 <span
                   style={{
                     backgroundColor: 'rgba(245, 166, 35, 0.15)',
@@ -251,7 +251,7 @@ export default function ConstructionPage() {
               <h1
                 className="heading-display"
                 style={{
-                  fontSize: 'clamp(2.2rem, 4.2vw, 3.6rem)',
+                  fontSize: 'clamp(2rem, 4.2vw, 3.6rem)',
                   color: '#FFFFFF',
                   lineHeight: '1.12',
                   marginBottom: '18px',
@@ -265,7 +265,7 @@ export default function ConstructionPage() {
                 className="text-lead"
                 style={{
                   color: 'rgba(255, 255, 255, 0.85)',
-                  fontSize: '1.08rem',
+                  fontSize: 'clamp(0.95rem, 1.2vw, 1.08rem)',
                   lineHeight: '1.7',
                   marginBottom: '32px',
                 }}
@@ -299,7 +299,7 @@ export default function ConstructionPage() {
             <div
               style={{
                 position: 'relative',
-                height: '460px',
+                height: 'clamp(280px, 42vw, 460px)',
                 borderRadius: '18px',
                 overflow: 'hidden',
                 border: '1px solid rgba(245, 166, 35, 0.35)',
@@ -359,8 +359,8 @@ export default function ConstructionPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '24px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(16px, 2.5vw, 24px)',
             }}
           >
             {services.map((srv, idx) => {
@@ -444,8 +444,8 @@ export default function ConstructionPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: '24px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
+              gap: 'clamp(16px, 2.5vw, 24px)',
             }}
           >
             {processSteps.map((st) => (
@@ -532,8 +532,8 @@ export default function ConstructionPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '28px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(20px, 3vw, 28px)',
               marginBottom: '32px',
             }}
           >

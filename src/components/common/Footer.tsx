@@ -25,9 +25,9 @@ export const Footer: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '48px',
-            marginBottom: '64px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))',
+            gap: 'clamp(28px, 4vw, 48px)',
+            marginBottom: 'clamp(40px, 6vw, 64px)',
           }}
         >
           {/* Column 1: Parent Brand Overview */}

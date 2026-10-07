@@ -57,13 +57,13 @@ export default function CrabsFishPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '56px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+              gap: 'clamp(32px, 5vw, 56px)',
               alignItems: 'center',
             }}
           >
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', flexWrap: 'wrap' }}>
                 <span
                   style={{
                     backgroundColor: 'rgba(42, 198, 226, 0.15)',
@@ -136,7 +136,7 @@ export default function CrabsFishPage() {
             <div
               style={{
                 position: 'relative',
-                height: '460px',
+                height: 'clamp(280px, 42vw, 460px)',
                 borderRadius: '18px',
                 overflow: 'hidden',
                 border: '1px solid rgba(42, 198, 226, 0.35)',
@@ -203,7 +203,7 @@ export default function CrabsFishPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: '28px',
               marginBottom: '48px',
             }}
@@ -215,7 +215,7 @@ export default function CrabsFishPage() {
                 backgroundColor: '#121216',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '16px',
-                padding: '36px 28px',
+                padding: 'clamp(24px, 3vw, 36px) clamp(18px, 2.5vw, 28px)',
                 display: 'flex',
                 flexDirection: 'column',
               }}
@@ -260,7 +260,7 @@ export default function CrabsFishPage() {
                 backgroundColor: '#121216',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '16px',
-                padding: '36px 28px',
+                padding: 'clamp(24px, 3vw, 36px) clamp(18px, 2.5vw, 28px)',
                 display: 'flex',
                 flexDirection: 'column',
               }}
@@ -305,7 +305,7 @@ export default function CrabsFishPage() {
                 backgroundColor: '#121216',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '16px',
-                padding: '36px 28px',
+                padding: 'clamp(24px, 3vw, 36px) clamp(18px, 2.5vw, 28px)',
                 display: 'flex',
                 flexDirection: 'column',
               }}
