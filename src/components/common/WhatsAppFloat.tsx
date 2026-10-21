@@ -102,10 +102,12 @@ export const WhatsAppFloat: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp btn-sm"
-            style={{ width: '100%', fontSize: '0.75rem', padding: '8px 14px' }}
+            style={{ width: '100%', fontSize: '0.78rem', padding: '9px 14px', justifyContent: 'center' }}
           >
-            <WhatsAppIcon size={16} color="#FFFFFF" />
-            Open WhatsApp
+            <div className="btn-icon-circle" style={{ width: '22px', height: '22px', borderRadius: '6px' }}>
+              <WhatsAppIcon size={14} color="#FFFFFF" />
+            </div>
+            <span>Open WhatsApp</span>
           </a>
         </div>
       )}
@@ -118,21 +120,23 @@ export const WhatsAppFloat: React.FC = () => {
           width: '58px',
           height: '58px',
           borderRadius: '50%',
-          backgroundColor: '#25D366',
+          background: 'linear-gradient(135deg, #10B981 0%, #059669 60%, #047857 100%)',
           color: '#FFFFFF',
-          border: 'none',
-          boxShadow: '0 8px 24px rgba(37, 211, 102, 0.45)',
+          border: '1px solid rgba(255, 255, 255, 0.28)',
+          boxShadow: '0 12px 28px -4px rgba(16, 185, 129, 0.5), 0 4px 12px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.45)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           cursor: 'pointer',
-          transition: 'all 0.25s ease',
+          transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.transform = 'scale(1.08)';
+          e.currentTarget.style.transform = 'scale(1.1) translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 16px 36px -4px rgba(16, 185, 129, 0.65), 0 6px 16px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.65)';
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.transform = 'scale(1) translateY(0)';
+          e.currentTarget.style.boxShadow = '0 12px 28px -4px rgba(16, 185, 129, 0.5), 0 4px 12px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.45)';
         }}
       >
         <WhatsAppIcon size={28} color="#FFFFFF" />

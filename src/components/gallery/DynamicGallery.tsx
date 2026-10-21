@@ -34,9 +34,16 @@ export const DynamicGallery: React.FC<DynamicGalleryProps> = ({
     let isMounted = true;
     setLoading(true);
 
+    const isFeaturedFilter =
+      selectedCategory === 'all' && showFilters
+        ? true
+        : featuredOnly
+        ? true
+        : undefined;
+
     fetchGalleryItems(
       selectedCategory === 'all' ? undefined : selectedCategory,
-      featuredOnly ? true : undefined
+      isFeaturedFilter
     )
       .then((data) => {
         if (isMounted) {
@@ -53,7 +60,7 @@ export const DynamicGallery: React.FC<DynamicGalleryProps> = ({
     return () => {
       isMounted = false;
     };
-  }, [selectedCategory, featuredOnly, limit]);
+  }, [selectedCategory, featuredOnly, limit, showFilters]);
 
   const activeItem = activeLightboxIndex !== null && items[activeLightboxIndex] ? items[activeLightboxIndex] : null;
 

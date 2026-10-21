@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logos/vesta-group.svg" type="image/svg+xml" />
+        <link rel="icon" href="/logos/vesta-group.png" type="image/png" />
       </head>
       <body>
         <Preloader />

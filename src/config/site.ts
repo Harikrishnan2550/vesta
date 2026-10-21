@@ -18,6 +18,42 @@ export const siteConfig = {
   // Company Presence
   presence: ['Kerala', 'Tamil Nadu', 'Puducherry', 'Dubai'],
 
+  // Regional Hubs & Footprint Details
+  hubs: [
+    {
+      name: 'Kerala',
+      role: 'Corporate Headquarters & Civil Operations',
+      desc: 'Central executive leadership, engineering offices & primary contracting hub',
+      badge: 'HEADQUARTERS',
+      accent: '#F5A623',
+      glowClass: 'about-hub-gold',
+    },
+    {
+      name: 'Tamil Nadu',
+      role: 'Sports Arena & Facility Development',
+      desc: 'Active sports turf infrastructure, civil contracts & client delivery',
+      badge: 'REGIONAL HUB',
+      accent: '#2AC6E2',
+      glowClass: 'about-hub-cyan',
+    },
+    {
+      name: 'Puducherry',
+      role: 'Coastal Aquaculture & Infrastructure',
+      desc: 'Hatchery operations, coastal development & sports arenas',
+      badge: 'REGIONAL HUB',
+      accent: '#10B981',
+      glowClass: 'about-hub-emerald',
+    },
+    {
+      name: 'Dubai',
+      role: 'International Reach & Partnerships',
+      desc: 'Cross-border partnerships, procurement & strategic ventures',
+      badge: 'GLOBAL HUB',
+      accent: '#CBD5E1',
+      glowClass: 'about-hub-platinum',
+    },
+  ],
+
   // Official Client Address
   address: {
     street: 'NH 66, Pulimootil Building',
@@ -32,7 +68,7 @@ export const siteConfig = {
 
   // Contact Channels
   contact: {
-    email: 'official.futureproperties@gmail.com',
+    email: process.env.NEXT_PUBLIC_SITE_EMAIL || 'info@vestafuture.in',
     phone: process.env.NEXT_PUBLIC_SITE_PHONE || '+91 95668 66144',
     phoneDisplay: '+91 95668 66144',
     whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919566866144',

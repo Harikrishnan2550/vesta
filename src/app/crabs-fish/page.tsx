@@ -116,18 +116,20 @@ export default function CrabsFishPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-whatsapp"
-                  style={{ padding: '14px 28px' }}
                 >
-                  <WhatsAppIcon size={18} color="#FFFFFF" />
-                  Inquire on WhatsApp
+                  <div className="btn-icon-circle">
+                    <WhatsAppIcon size={16} color="#FFFFFF" />
+                  </div>
+                  <span>Inquire on WhatsApp</span>
                 </a>
                 <a
                   href="#overview"
                   className="btn btn-outline-light"
-                  style={{ padding: '14px 28px' }}
                 >
-                  View Hatchery Overview
-                  <ArrowRight size={18} />
+                  <span>View Hatchery Overview</span>
+                  <div className="btn-icon-circle">
+                    <ArrowRight size={15} />
+                  </div>
                 </a>
               </div>
             </div>
@@ -409,10 +411,11 @@ export default function CrabsFishPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp"
-            style={{ padding: '14px 32px' }}
           >
-            <WhatsAppIcon size={18} color="#FFFFFF" />
-            Connect on WhatsApp
+            <div className="btn-icon-circle">
+              <WhatsAppIcon size={16} color="#FFFFFF" />
+            </div>
+            <span>Connect on WhatsApp</span>
           </a>
         </div>
       </section>

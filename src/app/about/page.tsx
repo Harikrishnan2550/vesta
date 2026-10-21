@@ -45,8 +45,8 @@ export default function AboutPage() {
       year: '2023',
       badge: 'Multi-Sector Scale',
       title: 'Sports & Marine Aquaculture',
-      lead: 'Expanded into specialized turnkey sports facilities and scientific marine hatchery bio-systems.',
-      desc: 'Constructed FIFA/BWF standard artificial turfs and sports arenas nationwide while launching The Seagull crab & fish hatchery operations.',
+      lead: 'Expanded into specialized turnkey sports facilities and scientific marine hatchery bio-systems, including advanced RAS aquaculture crab farming.',
+      desc: 'Constructed FIFA/BWF standard artificial turfs and sports arenas nationwide while launching The Seagull crab & fish hatchery and sustainable RAS aquaculture crab farming operations.',
       icon: Trophy,
       accent: '#2AC6E2',
     },
@@ -67,7 +67,7 @@ export default function AboutPage() {
       title: 'Vesta Future Builders & Developers',
       subtitle: 'Construction & Civil Contracting',
       desc: 'The founding pillar of Vesta Future. Delivering turnkey residential builds, structural engineering, 2D/3D elevations, renovations, and interior architecture with a decade of execution excellence.',
-      logo: '/logos/vesta-builders.svg',
+      logo: '/logo/Vesta Future Properties Logo.png',
       route: '/construction',
       accent: '#F5A623',
       tags: ['Civil Contracting', 'Turnkey Residential', 'Architectural Planning', 'Interior Fit-Outs'],
@@ -79,7 +79,7 @@ export default function AboutPage() {
       title: 'Vesta Future De Sports Infrastructure Pvt. Ltd.',
       subtitle: 'Turnkey Sports Facilities & Stadiums',
       desc: 'Specialized sports infrastructure provider delivering international-standard artificial football turfs, indoor badminton courts, athletic stadiums, and multi-sport complexes.',
-      logo: '/logos/vesta-sports.svg',
+      logo: '/logo/Vesta Future Sports Logo.png',
       route: '/sports',
       accent: '#F5A623',
       tags: ['FIFA-Grade Turf', 'BWF Wooden Courts', 'Stadium EPC', 'Multi-Sport Arenas'],
@@ -91,7 +91,7 @@ export default function AboutPage() {
       title: 'The Seagull — Crab & Fish Hatchery',
       subtitle: 'Scientific Marine Aquaculture Systems',
       desc: 'Scientific marine hatchery and aquaculture operations focusing on high-survival crab and fish seed cultivation, bio-secure RAS water management, and sustainable coastal development.',
-      logo: '/logos/the-seagull.svg',
+      logo: '/logo/seagull_logo_transparent.png',
       route: '/crabs-fish',
       accent: '#2AC6E2',
       tags: ['Crab Seed Hatchery', 'Scientific Aquaculture', 'RAS Filtration', 'Coastal Development'],
@@ -123,33 +123,6 @@ export default function AboutPage() {
     },
   ];
 
-  const HUBS = [
-    {
-      name: 'Kerala, India',
-      role: 'Corporate Headquarters & Operations Core',
-      desc: 'NH 66, Pulimootil Building, Cheppad P.O., Alappuzha',
-      badge: 'HEADQUARTERS',
-    },
-    {
-      name: 'Tamil Nadu',
-      role: 'Sports Infrastructure & Civil Projects',
-      desc: 'Turnkey sports turf construction & regional civil execution',
-      badge: 'REGIONAL HUB',
-    },
-    {
-      name: 'Puducherry',
-      role: 'Coastal Aquaculture & Infrastructure',
-      desc: 'Hatchery operations, coastal development & sports arenas',
-      badge: 'REGIONAL HUB',
-    },
-    {
-      name: 'Dubai, UAE',
-      role: 'International Reach & Partnerships',
-      desc: 'Cross-border partnerships, procurement & strategic ventures',
-      badge: 'GLOBAL HUB',
-    },
-  ];
-
   return (
     <div className="about-page-root">
       {/* Dynamic Background Glows */}
@@ -158,131 +131,70 @@ export default function AboutPage() {
       <div className="about-grid-overlay" />
 
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION: 2-COLUMN LUXURY INTRO WITH LEADERSHIP IMAGE              */}
+      {/* 1. HERO SECTION: EXPANSIVE FULL-WIDTH CINEMATIC INTRO                      */}
       {/* ========================================================================= */}
       <section className="about-hero-section">
         <div className="container">
-          <div className="about-hero-grid">
-            {/* Left Column: Focused Concise Content & Quick KPIs */}
-            <div className="about-hero-content">
-              <h1 className="about-hero-title">
-                A Decade of Building Foundations &amp;{' '}
-                <span className="about-title-gradient">Scaling Future Verticals</span>
-              </h1>
+          <div className="about-hero-content-wide">
+            <h1 className="about-hero-title">
+              Building Foundations,{' '}
+              <span className="about-title-gradient">Scaling the Future</span>
+            </h1>
 
-              <p className="about-hero-lead">
-                Uniting precision civil engineering, international sports infrastructure, and scientific marine aquaculture under Vesta Future Pvt. Ltd.
-              </p>
+            <p className="about-hero-lead">
+              Uniting precision civil engineering, international sports infrastructure, and scientific marine aquaculture under Vesta Future Pvt. Ltd.
+            </p>
 
-              {/* Quick KPI Strip */}
-              <div className="about-hero-kpi-grid">
-                <div className="about-kpi-card">
-                  <span className="about-kpi-number" style={{ color: '#F5A623' }}>
-                    <AnimatedCounter text="~10+ Yrs" />
-                  </span>
-                  <span className="about-kpi-text">Execution Legacy</span>
-                </div>
-                <div className="about-kpi-card">
-                  <span className="about-kpi-number" style={{ color: '#2AC6E2' }}>
-                    <AnimatedCounter text="3 Sectors" />
-                  </span>
-                  <span className="about-kpi-text">Operating Verticals</span>
-                </div>
-                <div className="about-kpi-card">
-                  <span className="about-kpi-number" style={{ color: '#10B981' }}>
-                    <AnimatedCounter text="Feb 2025" />
-                  </span>
-                  <span className="about-kpi-text">Pvt Ltd Structure</span>
-                </div>
-                <div className="about-kpi-card">
-                  <span className="about-kpi-number" style={{ color: '#FFFFFF' }}>
-                    <AnimatedCounter text="4 Hubs" />
-                  </span>
-                  <span className="about-kpi-text">Regional &amp; Global</span>
-                </div>
+            {/* Quick KPI Strip across full width */}
+            <div className="about-hero-kpi-grid">
+              <div className="about-kpi-card about-kpi-gold">
+                <div className="about-kpi-top-glow" />
+                <span className="about-kpi-number">
+                  <AnimatedCounter text="~10+ Yrs" />
+                </span>
+                <span className="about-kpi-text">Execution Legacy</span>
               </div>
-
-              <div className="about-hero-actions">
-                <a
-                  href={waUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-whatsapp"
-                >
-                  <WhatsAppIcon size={18} color="#FFFFFF" />
-                  Connect With Leadership
-                </a>
-                <a href="#ecosystem" className="btn btn-outline-gold">
-                  <span>Explore 3 Operating Sectors</span>
-                  <ArrowRight size={16} />
-                </a>
+              <div className="about-kpi-card about-kpi-cyan">
+                <div className="about-kpi-top-glow" />
+                <span className="about-kpi-number">
+                  <AnimatedCounter text="3 Sectors" />
+                </span>
+                <span className="about-kpi-text">Operating Verticals</span>
+              </div>
+              <div className="about-kpi-card about-kpi-emerald">
+                <div className="about-kpi-top-glow" />
+                <span className="about-kpi-number">
+                  <AnimatedCounter text="Feb 2025" />
+                </span>
+                <span className="about-kpi-text">Pvt Ltd Structure</span>
+              </div>
+              <div className="about-kpi-card about-kpi-platinum">
+                <div className="about-kpi-top-glow" />
+                <span className="about-kpi-number">
+                  <AnimatedCounter text="4 Hubs" />
+                </span>
+                <span className="about-kpi-text">Regional &amp; Global</span>
               </div>
             </div>
 
-            {/* Right Column: Executive Corporate Leadership Image */}
-            <div className="about-hero-media-wrap">
-              <Image
-                src="/images/about-leadership.jpg"
-                alt="Corporate Leadership - Vesta Future Pvt. Ltd."
-                fill
-                priority
-                sizes="(max-width: 991px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
-              />
-
-              {/* Gradient Shade for depth */}
-              <div
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background:
-                    'linear-gradient(180deg, rgba(7, 7, 9, 0.1) 0%, rgba(7, 7, 9, 0.3) 60%, rgba(7, 7, 9, 0.85) 100%)',
-                }}
-              />
-
-              {/* Floating Bottom HUD Badge */}
-              <div className="about-hero-media-badge">
-                <div
-                  style={{
-                    width: '38px',
-                    height: '38px',
-                    borderRadius: '10px',
-                    backgroundColor: 'rgba(245, 166, 35, 0.15)',
-                    border: '1px solid rgba(245, 166, 35, 0.4)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                  }}
-                >
-                  <ShieldCheck size={20} color="var(--gold-primary)" />
+            <div className="about-hero-actions">
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-btn-executive-whatsapp"
+              >
+                <div className="about-btn-icon-circle">
+                  <WhatsAppIcon size={18} color="#FFFFFF" />
                 </div>
-                <div>
-                  <div
-                    style={{
-                      fontFamily: "'Montserrat', sans-serif",
-                      fontSize: '0.74rem',
-                      fontWeight: 800,
-                      letterSpacing: '0.1em',
-                      color: 'var(--gold-primary)',
-                      textTransform: 'uppercase',
-                    }}
-                  >
-                    Enterprise Leadership &amp; Governance
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.84rem',
-                      fontWeight: 600,
-                      color: '#FFFFFF',
-                      marginTop: '2px',
-                    }}
-                  >
-                    Vesta Future Pvt. Ltd. (Incorporated 2025)
-                  </div>
+                <span>Connect With Leadership</span>
+              </a>
+              <a href="#ecosystem" className="about-btn-luxury-sectors">
+                <span>Explore 3 Operating Sectors</span>
+                <div className="about-btn-arrow-circle">
+                  <ArrowRight size={15} />
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -359,8 +271,8 @@ export default function AboutPage() {
                       src={div.logo}
                       alt={div.title}
                       fill
-                      sizes="220px"
-                      style={{ objectFit: 'contain' }}
+                      sizes="240px"
+                      style={{ objectFit: 'contain', padding: '4px 8px' }}
                     />
                   </div>
 
@@ -380,7 +292,9 @@ export default function AboutPage() {
                   <div className="about-div-actions">
                     <Link href={div.route} className="btn btn-primary">
                       <span>Explore Division</span>
-                      <ArrowRight size={16} />
+                      <div className="btn-icon-circle">
+                        <ArrowRight size={15} />
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -445,18 +359,15 @@ export default function AboutPage() {
           </div>
 
           <div className="about-hubs-grid">
-            {HUBS.map((hub, idx) => (
-              <div key={idx} className="about-hub-card">
-                <div className="about-hub-top">
+            {siteConfig.hubs.map((hub, idx) => (
+              <div key={idx} className={`about-hub-card about-hub-card-compact ${hub.glowClass}`}>
+                <div className="about-hub-top-glow" />
+                <div className="about-hub-icon-center">
                   <div className="about-hub-icon">
-                    <MapPin size={22} color="var(--gold-primary)" />
+                    <MapPin size={24} color={hub.accent} />
                   </div>
-                  <span className="about-hub-badge">{hub.badge}</span>
                 </div>
-
-                <h3 className="about-hub-name">{hub.name}</h3>
-                <div className="about-hub-role">{hub.role}</div>
-                <p className="about-hub-desc">{hub.desc}</p>
+                <h3 className="about-hub-name-center">{hub.name}</h3>
               </div>
             ))}
           </div>
@@ -491,17 +402,20 @@ export default function AboutPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
-                style={{ padding: '16px 36px', fontSize: '1rem' }}
               >
-                <WhatsAppIcon size={20} color="#FFFFFF" />
-                Connect on WhatsApp
+                <div className="btn-icon-circle">
+                  <WhatsAppIcon size={16} color="#FFFFFF" />
+                </div>
+                <span>Connect on WhatsApp</span>
               </a>
               <a
-                href="mailto:official.futureproperties@gmail.com"
+                href={`mailto:${siteConfig.contact.email}`}
                 className="btn btn-outline-gold"
-                style={{ padding: '16px 32px' }}
               >
                 <span>Email Corporate Office</span>
+                <div className="btn-icon-circle">
+                  <ArrowRight size={15} />
+                </div>
               </a>
             </div>
           </div>

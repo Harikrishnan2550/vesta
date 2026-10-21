@@ -225,51 +225,12 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          {/* Black CTA Button on Right */}
+          {/* Luxury CTA Button on Right */}
           <div className="desktop-actions" style={{ display: 'none', alignItems: 'center' }}>
-            <Link
-              href="/contact"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                backgroundColor: '#121214',
-                color: '#FFFFFF',
-                fontFamily: 'var(--font-display)',
-                fontSize: '0.78rem',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.08em',
-                padding: '12px 24px',
-                borderRadius: '40px',
-                textDecoration: 'none',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 6px 18px rgba(0, 0, 0, 0.3)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--gold-primary)';
-                e.currentTarget.style.color = '#070709';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#121214';
-                e.currentTarget.style.color = '#FFFFFF';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
+            <Link href="/contact" className="nav-cta-luxury">
               <span>Get In Touch</span>
-              <div
-                style={{
-                  width: '22px',
-                  height: '22px',
-                  borderRadius: '50%',
-                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <ArrowRight size={12} />
+              <div className="nav-cta-arrow">
+                <ArrowRight size={13} strokeWidth={2.2} />
               </div>
             </Link>
           </div>
@@ -551,22 +512,12 @@ export const Navbar: React.FC = () => {
           <Link
             href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
+            className="btn btn-primary"
             style={{
-              marginTop: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              backgroundColor: '#121214',
-              color: '#FFFFFF',
-              fontFamily: "'Montserrat', sans-serif",
-              fontSize: '0.82rem',
-              fontWeight: 800,
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
-              padding: '14px',
-              borderRadius: '40px',
-              textDecoration: 'none',
+              marginTop: '10px',
+              width: '100%',
+              padding: '13px 20px',
+              fontSize: '0.84rem',
             }}
           >
             <span>Get In Touch</span>

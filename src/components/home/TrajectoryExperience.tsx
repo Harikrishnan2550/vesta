@@ -103,13 +103,13 @@ const ERAS: EraItem[] = [
     icon: Trophy,
     iconColor: '#2AC6E2',
     glowColor: 'rgba(42, 198, 226, 0.4)',
-    lead: 'Diversified into specialized turnkey sports infrastructure alongside marine crab and fish hatchery operations under unified corporate vision.',
+    lead: 'Diversified into specialized turnkey sports infrastructure alongside RAS aquaculture crab farming and marine hatchery operations under unified corporate vision.',
     description:
-      'Built world-class sports arenas, FIFA/BWF standard artificial turfs, and court complexes, while scaling scientific marine hatchery systems under The Seagull brand.',
+      'Built world-class sports arenas, FIFA/BWF standard artificial turfs, and court complexes, while scaling scientific marine hatchery and sustainable RAS aquaculture crab farming systems under The Seagull brand.',
     img: '/images/hero/sports.jpg',
     route: '/sports',
     routeLabel: 'Explore Sports & Aquaculture',
-    tags: ['Turnkey Sports Arenas', 'FIFA/BWF Standards', 'The Seagull Hatcheries', 'Marine Aquaculture'],
+    tags: ['Turnkey Sports Arenas', 'FIFA/BWF Standards', 'RAS Crab Farming', 'The Seagull Hatcheries'],
     metrics: [
       { value: '3 Sectors', label: 'Operating Verticals' },
       { value: 'Turnkey', label: 'Sports Arena EPC' },
@@ -352,10 +352,15 @@ export default function TrajectoryExperience() {
                 <div className="nexus-era-actions">
                   <Link href={currentEra.route} className="btn btn-primary">
                     <span>{currentEra.routeLabel}</span>
-                    <ArrowRight size={16} />
+                    <div className="btn-icon-circle">
+                      <ArrowRight size={15} />
+                    </div>
                   </Link>
                   <Link href="/about" className="btn btn-outline-gold">
                     <span>Full Company Story</span>
+                    <div className="btn-icon-circle">
+                      <ArrowRight size={15} />
+                    </div>
                   </Link>
                 </div>
               </div>

@@ -111,18 +111,20 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
-                style={{ padding: '14px 28px' }}
               >
-                <WhatsAppIcon size={18} color="#FFFFFF" />
-                WhatsApp: +91 95668 66144
+                <div className="btn-icon-circle">
+                  <WhatsAppIcon size={16} color="#FFFFFF" />
+                </div>
+                <span>WhatsApp: +91 95668 66144</span>
               </a>
               <a
                 href="tel:+919566866144"
                 className="btn btn-outline-gold"
-                style={{ padding: '14px 28px' }}
               >
-                <Phone size={18} />
-                Call: +91 95668 66144
+                <div className="btn-icon-circle">
+                  <Phone size={15} />
+                </div>
+                <span>Call: +91 95668 66144</span>
               </a>
             </div>
           </div>

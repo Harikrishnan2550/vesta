@@ -283,8 +283,10 @@ export const ContactForm: React.FC = () => {
         className="btn btn-primary"
         style={{ width: '100%', padding: '14px' }}
       >
-        <Send size={16} />
-        {status === 'submitting' ? 'Submitting...' : 'Submit Inquiry'}
+        <div className="btn-icon-circle" style={{ background: 'rgba(0, 0, 0, 0.15)', color: '#000000' }}>
+          <Send size={15} />
+        </div>
+        <span>{status === 'submitting' ? 'Submitting...' : 'Submit Inquiry'}</span>
       </button>
     </form>
   );

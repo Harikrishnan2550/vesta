@@ -535,43 +535,16 @@ export default function HomePage() {
             align="center"
           />
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))',
-              gap: 'clamp(16px, 2.5vw, 24px)',
-            }}
-          >
-            {siteConfig.presence.map((loc, idx) => (
-              <div
-                key={idx}
-                className="card-luxury"
-                style={{
-                  backgroundColor: '#16161D',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderRadius: '14px',
-                  padding: '32px 24px',
-                  textAlign: 'center',
-                }}
-              >
-                <div
-                  style={{
-                    width: '50px',
-                    height: '50px',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(245, 166, 35, 0.1)',
-                    border: '1px solid rgba(245, 166, 35, 0.25)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 16px auto',
-                  }}
-                >
-                  <MapPin size={24} color="var(--gold-primary)" />
+          <div className="about-hubs-grid">
+            {siteConfig.hubs.map((hub, idx) => (
+              <div key={idx} className={`about-hub-card about-hub-card-compact ${hub.glowClass}`}>
+                <div className="about-hub-top-glow" />
+                <div className="about-hub-icon-center">
+                  <div className="about-hub-icon">
+                    <MapPin size={24} color={hub.accent} />
+                  </div>
                 </div>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#FFFFFF', margin: 0 }}>
-                  {loc}
-                </h3>
+                <h3 className="about-hub-name-center">{hub.name}</h3>
               </div>
             ))}
           </div>
@@ -640,13 +613,17 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp"
-              style={{ padding: '14px 28px' }}
             >
-              <WhatsAppIcon size={18} color="#FFFFFF" />
-              Connect on WhatsApp
+              <div className="btn-icon-circle">
+                <WhatsAppIcon size={16} color="#FFFFFF" />
+              </div>
+              <span>Connect on WhatsApp</span>
             </a>
-            <Link href="/contact" className="btn btn-outline-light" style={{ padding: '14px 28px' }}>
-              Corporate Contact Details
+            <Link href="/contact" className="btn btn-outline-light">
+              <span>Corporate Contact Details</span>
+              <div className="btn-icon-circle">
+                <ArrowRight size={15} />
+              </div>
             </Link>
           </div>
         </div>

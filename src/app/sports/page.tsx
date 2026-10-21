@@ -36,14 +36,78 @@ export default function SportsPage() {
 
   // 8 Facilities
   const facilities = [
-    { title: 'Multi-sport Turfs', desc: 'All-weather synthetic grass turf systems engineered with high-resilience monofilament yarn and rapid subsurface drainage.', icon: Trophy },
-    { title: 'Indoor Badminton Courts', desc: 'BWF-standard sprung hardwood timber (maple/teak) flooring and multi-layer cushioned PVC synthetic sports vinyl.', icon: Activity },
-    { title: 'Volleyball Courts', desc: 'Outdoor and indoor volleyball surfaces engineered with seamless polyurethane or cushioned acrylic systems.', icon: CircleDot },
-    { title: 'Multi-purpose Synthetic Sports Grounds', desc: 'Versatile synthetic arenas designed for multi-sport versatility—futsal, basketball, volleyball, and tennis on a single surface.', icon: Layers },
-    { title: 'Indoor Stadiums', desc: 'Turnkey indoor sports arena construction including structural steel roofing, anti-glare high-mast sports LED lighting, and seating.', icon: Building2 },
-    { title: 'Indoor Swimming Pools', desc: 'Aquatic complexes featuring temperature-controlled circulation, anti-microbial tiling, underwater lighting, and drainage.', icon: Flame },
-    { title: 'Gyms & Fitness Facilities', desc: 'Custom gym architecture, heavy-duty acoustic rubber flooring, cross-functional training zones, and fitness amenities.', icon: Award },
-    { title: 'Synthetic Sports Surfaces', desc: 'Cushioned acrylic sports flooring, EPDM rubber safety surfacing, and polyurethane running tracks resistant to UV weathering.', icon: Sparkles },
+    {
+      code: 'FAC-01',
+      title: 'Multi-sport Turfs',
+      desc: 'All-weather synthetic grass turf systems engineered with high-resilience monofilament yarn and rapid subsurface drainage.',
+      icon: Trophy,
+      accent: '#F5A623',
+      themeClass: 'facility-theme-gold',
+      specs: ['High-resilience monofilament yarn', 'Laser-graded rapid sub-drainage'],
+    },
+    {
+      code: 'FAC-02',
+      title: 'Indoor Badminton Courts',
+      desc: 'BWF-standard sprung hardwood timber (maple/teak) flooring and multi-layer cushioned PVC synthetic sports vinyl.',
+      icon: Activity,
+      accent: '#2AC6E2',
+      themeClass: 'facility-theme-cyan',
+      specs: ['BWF-certified sprung hardwood', 'Multi-layer PVC cushion vinyl'],
+    },
+    {
+      code: 'FAC-03',
+      title: 'Volleyball Courts',
+      desc: 'Outdoor and indoor volleyball surfaces engineered with seamless polyurethane or cushioned acrylic systems.',
+      icon: CircleDot,
+      accent: '#10B981',
+      themeClass: 'facility-theme-emerald',
+      specs: ['Seamless polyurethane matrix', 'High shock & impact damping'],
+    },
+    {
+      code: 'FAC-04',
+      title: 'Multi-purpose Synthetic Sports Grounds',
+      desc: 'Versatile synthetic arenas designed for multi-sport versatility—futsal, basketball, volleyball, and tennis on a single surface.',
+      icon: Layers,
+      accent: '#F5A623',
+      themeClass: 'facility-theme-gold',
+      specs: ['Multi-sport hybrid line marking', 'UV-stable all-weather acrylic'],
+    },
+    {
+      code: 'FAC-05',
+      title: 'Indoor Stadiums',
+      desc: 'Turnkey indoor sports arena construction including structural steel roofing, anti-glare high-mast sports LED lighting, and seating.',
+      icon: Building2,
+      accent: '#2AC6E2',
+      themeClass: 'facility-theme-cyan',
+      specs: ['Structural steel roof spans', 'Anti-glare high-mast sports LED'],
+    },
+    {
+      code: 'FAC-06',
+      title: 'Indoor Swimming Pools',
+      desc: 'Aquatic complexes featuring temperature-controlled circulation, anti-microbial tiling, underwater lighting, and drainage.',
+      icon: Flame,
+      accent: '#10B981',
+      themeClass: 'facility-theme-emerald',
+      specs: ['Automated temperature control', 'Anti-microbial & anti-slip tiling'],
+    },
+    {
+      code: 'FAC-07',
+      title: 'Gyms & Fitness Facilities',
+      desc: 'Custom gym architecture, heavy-duty acoustic rubber flooring, cross-functional training zones, and fitness amenities.',
+      icon: Award,
+      accent: '#F5A623',
+      themeClass: 'facility-theme-gold',
+      specs: ['Heavy-duty acoustic rubber', 'Cross-training load resistance'],
+    },
+    {
+      code: 'FAC-08',
+      title: 'Synthetic Sports Surfaces',
+      desc: 'Cushioned acrylic sports flooring, EPDM rubber safety surfacing, and polyurethane running tracks resistant to UV weathering.',
+      icon: Sparkles,
+      accent: '#2AC6E2',
+      themeClass: 'facility-theme-cyan',
+      specs: ['EPDM rubber safety surfacing', 'UV-resistant running tracks'],
+    },
   ];
 
   // 6 Confirmed Segments
@@ -52,31 +116,55 @@ export default function SportsPage() {
       num: '01',
       title: 'Football Turf Installation',
       desc: 'All-weather 5s, 7s, and 11s artificial grass football turfs with resilient infill and laser-graded drainage.',
+      icon: Trophy,
+      accent: '#F5A623',
+      themeClass: 'segment-theme-gold',
+      tags: ['FIFA Quality Turf', 'Laser Sub-Drainage'],
     },
     {
       num: '02',
       title: 'Cricket Turf & Synthetic Cricket Pitches',
       desc: 'High-density synthetic cricket pitches, practice nets, and full cricket turf boxes with natural ball bounce.',
+      icon: Activity,
+      accent: '#2AC6E2',
+      themeClass: 'segment-theme-cyan',
+      tags: ['High-Density Yarn', 'Natural Ball Bounce'],
     },
     {
       num: '03',
       title: 'Indoor Badminton Court Construction',
       desc: 'BWF-standard sprung wooden (maple/teak) or synthetic PVC cushioned badminton court installations.',
+      icon: Zap,
+      accent: '#10B981',
+      themeClass: 'segment-theme-emerald',
+      tags: ['BWF Sprung Hardwood', 'Multi-Layer Cushion'],
     },
     {
       num: '04',
       title: 'Indoor Volleyball, Basketball & Multi-Sport Fields',
       desc: 'Multi-sport indoor & outdoor acrylic/polyurethane arenas engineered for high athletic grip and safety.',
+      icon: Layers,
+      accent: '#F5A623',
+      themeClass: 'segment-theme-gold',
+      tags: ['PU & Acrylic Arenas', 'Athletic Grip & Safety'],
     },
     {
       num: '05',
       title: 'Indoor Swimming Pools',
       desc: 'Modern aquatic complexes with automated filtration, temperature control, and anti-slip deck surrounds.',
+      icon: Flame,
+      accent: '#2AC6E2',
+      themeClass: 'segment-theme-cyan',
+      tags: ['Automated Filtration', 'Anti-Slip Deck Surrounds'],
     },
     {
       num: '06',
       title: 'Skating Ground & College Sports Ground Setup',
       desc: 'Smooth acrylic roller skating rinks and full-scale campus sports complex civil development.',
+      icon: CircleDot,
+      accent: '#10B981',
+      themeClass: 'segment-theme-emerald',
+      tags: ['Precision Acrylic Rinks', 'Campus Turnkey Civil'],
     },
   ];
 
@@ -86,31 +174,43 @@ export default function SportsPage() {
       icon: Globe2,
       title: '10+ Years Experience',
       desc: '10+ years of turf construction experience across India and international projects.',
+      accent: '#F5A623',
+      glowClass: 'sports-glow-gold',
     },
     {
       icon: Compass,
       title: 'Challenging Installations',
       desc: 'Expertise in challenging installations, including indoor sports turf and outdoor gym areas.',
+      accent: '#2AC6E2',
+      glowClass: 'sports-glow-cyan',
     },
     {
       icon: Hammer,
       title: 'Precision-Engineered Base Work',
       desc: 'Precision-engineered base work for uniform surface levels, consistent performance, and natural ball bounce.',
+      accent: '#10B981',
+      glowClass: 'sports-glow-emerald',
     },
     {
       icon: ShieldCheck,
       title: '10-Year Warranty',
       desc: 'Safe, durable, and low-maintenance systems backed by a comprehensive 10-year warranty.',
+      accent: '#F5A623',
+      glowClass: 'sports-glow-gold',
     },
     {
       icon: GraduationCap,
       title: 'Proven Multi-Sector Execution',
       desc: 'Successfully executed projects for schools, colleges, residential developments, sports academies, and other sports facilities.',
+      accent: '#2AC6E2',
+      glowClass: 'sports-glow-cyan',
     },
     {
       icon: Award,
       title: 'Quality-Focused Execution',
       desc: 'Quality-focused execution with attention to performance, safety, durability, and long-term value.',
+      accent: '#10B981',
+      glowClass: 'sports-glow-emerald',
     },
   ];
 
@@ -229,18 +329,20 @@ export default function SportsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-whatsapp"
-                  style={{ padding: '14px 28px' }}
                 >
-                  <WhatsAppIcon size={18} color="#FFFFFF" />
-                  Inquire on WhatsApp
+                  <div className="btn-icon-circle">
+                    <WhatsAppIcon size={16} color="#FFFFFF" />
+                  </div>
+                  <span>Inquire on WhatsApp</span>
                 </a>
                 <a
                   href="#segments"
                   className="btn btn-outline-gold"
-                  style={{ padding: '14px 28px' }}
                 >
-                  View Our Segments
-                  <ArrowRight size={18} />
+                  <span>View Our Segments</span>
+                  <div className="btn-icon-circle">
+                    <ArrowRight size={15} />
+                  </div>
                 </a>
               </div>
             </div>
@@ -306,14 +408,7 @@ export default function SportsPage() {
         }}
       >
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
-              gap: 'clamp(32px, 5vw, 56px)',
-              alignItems: 'center',
-            }}
-          >
+          <div className="sports-overview-grid">
             <div>
               <SectionHeading
                 eyebrow="Company Overview"
@@ -321,108 +416,115 @@ export default function SportsPage() {
                 subtitle="From concept and civil engineering to precision surface installation and handover."
               />
 
-              <p
-                style={{
-                  fontSize: '1.05rem',
-                  color: 'rgba(255, 255, 255, 0.85)',
-                  lineHeight: '1.75',
-                  marginBottom: '18px',
-                }}
-              >
+              <p className="sports-overview-lead">
                 <strong>Vesta Future De Sports Infrastructure Pvt. Ltd.</strong> is a professionally
-                driven sports infrastructure company providing comprehensive, end-to-end solutions
-                for modern sports facilities.
+                driven sports infrastructure company delivering high-standard turnkey complexes,
+                turfs, and athletic facilities engineered for world-class playability and long-term durability.
               </p>
 
-              <p
-                style={{
-                  fontSize: '0.95rem',
-                  color: 'rgba(255, 255, 255, 0.72)',
-                  lineHeight: '1.75',
-                  marginBottom: '20px',
-                }}
-              >
-                The company specializes in design, construction, development, installation, surface
-                installation, finishing, and project handover. Our turnkey solutions cover every
-                stage of the project lifecycle.
-              </p>
+              <div className="sports-overview-features">
+                <div className="sports-overview-feature-item">
+                  <div className="sports-overview-feature-icon">
+                    <Layers size={18} color="var(--gold-primary)" />
+                  </div>
+                  <div className="sports-overview-feature-text">
+                    <strong>Complete Turnkey Specialization</strong>
+                    Single-point accountability covering architectural planning, civil sub-base, certified turf installation, and arena lighting.
+                  </div>
+                </div>
 
-              <p
-                style={{
-                  fontSize: '0.95rem',
-                  color: 'rgba(255, 255, 255, 0.72)',
-                  lineHeight: '1.75',
-                  marginBottom: '28px',
-                }}
-              >
-                We are committed to delivering high-quality, durable, safe, and performance-oriented
-                sports facilities designed to provide long-term value and an exceptional user
-                experience.
-              </p>
+                <div className="sports-overview-feature-item">
+                  <div className="sports-overview-feature-icon">
+                    <ShieldCheck size={18} color="var(--gold-primary)" />
+                  </div>
+                  <div className="sports-overview-feature-text">
+                    <strong>International Athletic Quality & Safety</strong>
+                    Engineered to global sporting standards with focus on athlete safety, natural ball bounce, and high UV weather-resistance.
+                  </div>
+                </div>
+              </div>
+
+              {/* 3 Executive Metrics */}
+              <div className="sports-overview-stats">
+                <div className="sports-overview-stat-card">
+                  <div className="sports-overview-stat-num">10+</div>
+                  <div className="sports-overview-stat-label">Years Field Experience</div>
+                </div>
+                <div className="sports-overview-stat-card">
+                  <div className="sports-overview-stat-num">100%</div>
+                  <div className="sports-overview-stat-label">Turnkey Execution</div>
+                </div>
+                <div className="sports-overview-stat-card">
+                  <div className="sports-overview-stat-num">10-Yr</div>
+                  <div className="sports-overview-stat-label">Warranty Support</div>
+                </div>
+              </div>
             </div>
 
-            {/* Turnkey Flow Diagram */}
-            <div
-              style={{
-                backgroundColor: '#16161D',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '18px',
-                padding: 'clamp(24px, 4vw, 36px) clamp(18px, 3vw, 28px)',
-                boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: '1.25rem',
-                  fontWeight: 800,
-                  color: '#FFFFFF',
-                  marginBottom: '24px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px',
-                }}
-              >
-                <ShieldCheck color="var(--gold-primary)" size={24} />
-                Turnkey Project Lifecycle
-              </h3>
+            {/* Turnkey Pipeline Card */}
+            <div className="turnkey-pipeline-card">
+              <div className="turnkey-pipeline-header">
+                <div className="turnkey-header-left">
+                  <div className="turnkey-shield-icon">
+                    <ShieldCheck color="var(--gold-primary)" size={22} />
+                  </div>
+                  <div>
+                    <h3 className="turnkey-title-main">Turnkey Project Lifecycle</h3>
+                    <div className="turnkey-subtitle-sub">Seamless Single-Contract Delivery</div>
+                  </div>
+                </div>
+                <span className="turnkey-badge-status">
+                  <span className="turnkey-badge-dot" />
+                  PHASE 01–06
+                </span>
+              </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              <div className="turnkey-pipeline-list">
                 {[
-                  'Planning & Topographical Survey',
-                  'Architectural & Engineering Design',
-                  'Civil Sub-Base & Drainage Construction',
-                  'Certified Surface & Turf Installation',
-                  'Arena Lighting & Equipment Finishing',
-                  'Final Quality Inspection & Handover',
+                  {
+                    num: '01',
+                    title: 'Planning & Topographical Survey',
+                    desc: 'Laser terrain leveling, soil bearing analysis & site layout mapping',
+                  },
+                  {
+                    num: '02',
+                    title: 'Architectural & Engineering Design',
+                    desc: 'CAD sports blueprints, drainage calculation & 3D civil modeling',
+                  },
+                  {
+                    num: '03',
+                    title: 'Civil Sub-Base & Drainage Construction',
+                    desc: 'Multi-layer aggregate grading, laser levelling & perforated drain networks',
+                  },
+                  {
+                    num: '04',
+                    title: 'Certified Surface & Turf Installation',
+                    desc: 'FIFA/BWF-grade monofilament grass, sprung timber & shock-pad underlay',
+                  },
+                  {
+                    num: '05',
+                    title: 'Arena Lighting & Equipment Finishing',
+                    desc: 'Anti-glare high-mast sports LED systems, safety netting & court fixtures',
+                  },
+                  {
+                    num: '06',
+                    title: 'Final Quality Inspection & Handover',
+                    desc: 'Playability testing, ball rebound certification & client handover package',
+                  },
                 ].map((step, idx) => (
-                  <div
-                    key={idx}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '14px',
-                      backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255, 255, 255, 0.06)',
-                      borderRadius: '8px',
-                      padding: '12px 16px',
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: 'var(--font-display)',
-                        fontSize: '0.85rem',
-                        fontWeight: 900,
-                        color: 'var(--gold-primary)',
-                        backgroundColor: 'rgba(245, 166, 35, 0.12)',
-                        padding: '4px 8px',
-                        borderRadius: '4px',
-                      }}
-                    >
-                      0{idx + 1}
+                  <div key={idx} className="turnkey-stage-item">
+                    <span className="turnkey-stage-num">
+                      {step.num}
                     </span>
-                    <span style={{ fontSize: '0.9rem', color: '#FFFFFF', fontWeight: 600 }}>
-                      {step}
-                    </span>
+                    <div className="turnkey-stage-info">
+                      <h4 className="turnkey-stage-title">
+                        {step.title}
+                      </h4>
+                      <p className="turnkey-stage-desc">
+                        {step.desc}
+                      </p>
+                    </div>
+                    <ArrowRight size={16} className="turnkey-stage-arrow" />
                   </div>
                 ))}
               </div>
@@ -473,63 +575,21 @@ export default function SportsPage() {
             </p>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
-              gap: '24px',
-            }}
-          >
+          <div className="sports-features-grid">
             {keyFeatures.map((feat, idx) => {
               const IconComp = feat.icon;
               return (
-                <div
-                  key={idx}
-                  className="card-luxury"
-                  style={{
-                    backgroundColor: '#121216',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    borderRadius: '16px',
-                    padding: 'clamp(24px, 3vw, 32px) clamp(18px, 2.5vw, 26px)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <div
-                    style={{
-                      width: '52px',
-                      height: '52px',
-                      borderRadius: '12px',
-                      backgroundColor: 'rgba(245, 166, 35, 0.12)',
-                      border: '1px solid rgba(245, 166, 35, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '20px',
-                    }}
-                  >
-                    <IconComp size={26} color="var(--gold-primary)" />
+                <div key={idx} className={`sports-feature-card ${feat.glowClass}`}>
+                  <div className="sports-feature-top-glow" />
+                  <div className="sports-feature-icon-wrap">
+                    <IconComp size={24} color={feat.accent} />
                   </div>
 
-                  <h3
-                    style={{
-                      fontSize: '1.2rem',
-                      fontWeight: 700,
-                      color: '#FFFFFF',
-                      marginBottom: '12px',
-                    }}
-                  >
+                  <h3 className="sports-feature-title">
                     {feat.title}
                   </h3>
 
-                  <p
-                    style={{
-                      fontSize: '0.88rem',
-                      color: 'rgba(255, 255, 255, 0.72)',
-                      lineHeight: '1.65',
-                      margin: 0,
-                    }}
-                  >
+                  <p className="sports-feature-desc">
                     {feat.desc}
                   </p>
                 </div>
@@ -559,79 +619,54 @@ export default function SportsPage() {
             align="center"
           />
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
-              gap: '24px',
-            }}
-          >
-            {ourSegments.map((seg) => (
-              <div
-                key={seg.num}
-                className="card-luxury"
-                style={{
-                  backgroundColor: '#16161D',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderRadius: '16px',
-                  padding: 'clamp(24px, 3vw, 32px) clamp(18px, 2.5vw, 26px)',
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
+          <div className="sports-segments-grid">
+            {ourSegments.map((seg) => {
+              const IconComp = seg.icon;
+              return (
                 <div
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: '3rem',
-                    fontWeight: 900,
-                    color: 'rgba(245, 166, 35, 0.15)',
-                    position: 'absolute',
-                    top: '12px',
-                    right: '18px',
-                    lineHeight: '1',
-                  }}
+                  key={seg.num}
+                  className={`sports-segment-card ${seg.themeClass}`}
                 >
-                  {seg.num}
+                  {/* Top Header: High-Tech Capsule on Left, Architectural Hollow Numeral on Right */}
+                  <div className="segment-card-header">
+                    <span className="segment-capsule-tag">
+                      <span className="segment-capsule-dot" />
+                      SEGMENT {seg.num}
+                    </span>
+                    <span className="segment-hollow-num" aria-hidden="true">
+                      {seg.num}
+                    </span>
+                  </div>
+
+                  {/* Frosted Icon Box */}
+                  <div className="segment-icon-box">
+                    <IconComp size={22} color={seg.accent} />
+                  </div>
+
+                  {/* Title & Description */}
+                  <h3 className="segment-card-title">
+                    {seg.title}
+                  </h3>
+
+                  <p className="segment-card-desc">
+                    {seg.desc}
+                  </p>
+
+                  {/* Engineering Specification Tags */}
+                  <div className="segment-spec-tags">
+                    {seg.tags.map((tag, tIdx) => (
+                      <span key={tIdx} className="segment-spec-tag">
+                        <CheckCircle2 size={12} color={seg.accent} />
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Bottom Animated Laser Rail */}
+                  <div className="segment-card-rail" />
                 </div>
-
-                <span
-                  style={{
-                    backgroundColor: 'var(--gold-primary)',
-                    color: '#000000',
-                    fontWeight: 800,
-                    fontSize: '0.75rem',
-                    padding: '3px 10px',
-                    borderRadius: '4px',
-                    display: 'inline-block',
-                    marginBottom: '18px',
-                  }}
-                >
-                  SEGMENT {seg.num}
-                </span>
-
-                <h3
-                  style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 700,
-                    color: '#FFFFFF',
-                    marginBottom: '12px',
-                  }}
-                >
-                  {seg.title}
-                </h3>
-
-                <p
-                  style={{
-                    fontSize: '0.88rem',
-                    color: 'rgba(255, 255, 255, 0.72)',
-                    lineHeight: '1.65',
-                    margin: 0,
-                  }}
-                >
-                  {seg.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -648,66 +683,45 @@ export default function SportsPage() {
             align="center"
           />
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
-              gap: '24px',
-              marginBottom: '56px',
-            }}
-          >
+          <div className="sports-facilities-grid">
             {facilities.map((fac, idx) => {
               const FacIcon = fac.icon;
               return (
                 <div
                   key={idx}
-                  className="card-luxury"
-                  style={{
-                    backgroundColor: '#121216',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    borderRadius: '14px',
-                    padding: 'clamp(20px, 2.5vw, 28px) clamp(16px, 2vw, 24px)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
+                  className={`sports-facility-card ${fac.themeClass}`}
                 >
-                  <div
-                    style={{
-                      width: '48px',
-                      height: '48px',
-                      borderRadius: '10px',
-                      backgroundColor: 'rgba(245, 166, 35, 0.1)',
-                      border: '1px solid rgba(245, 166, 35, 0.25)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '18px',
-                    }}
-                  >
-                    <FacIcon size={24} color="var(--gold-primary)" />
+                  {/* Left Vertical Illuminated Edge Spine */}
+                  <div className="facility-edge-spine" />
+
+                  {/* Card Header: Disc Icon on Left, Monospace Code Chip on Right */}
+                  <div className="facility-card-header">
+                    <div className="facility-icon-disc">
+                      <FacIcon size={22} color={fac.accent} />
+                    </div>
+                    <span className="facility-code-badge">
+                      {fac.code}
+                    </span>
                   </div>
 
-                  <h3
-                    style={{
-                      fontSize: '1.15rem',
-                      fontWeight: 700,
-                      color: '#FFFFFF',
-                      marginBottom: '10px',
-                    }}
-                  >
+                  {/* Title & Description */}
+                  <h3 className="facility-card-title">
                     {fac.title}
                   </h3>
 
-                  <p
-                    style={{
-                      fontSize: '0.85rem',
-                      color: 'rgba(255, 255, 255, 0.72)',
-                      lineHeight: '1.6',
-                      margin: 0,
-                    }}
-                  >
+                  <p className="facility-card-desc">
                     {fac.desc}
                   </p>
+
+                  {/* Engineering Capability Highlights */}
+                  <div className="facility-specs-list">
+                    {fac.specs.map((spec, sIdx) => (
+                      <div key={sIdx} className="facility-spec-item">
+                        <span className="facility-spec-bullet" />
+                        <span>{spec}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               );
             })}
@@ -865,9 +879,12 @@ export default function SportsPage() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.9rem' }}>
                   <Mail size={18} color="var(--gold-primary)" />
-                  <span style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-                    official.futureproperties@gmail.com
-                  </span>
+                  <a
+                    href={`mailto:${siteConfig.contact.email}`}
+                    style={{ color: 'rgba(255, 255, 255, 0.85)', textDecoration: 'none' }}
+                  >
+                    {siteConfig.contact.email}
+                  </a>
                 </div>
               </div>
             </div>
@@ -909,10 +926,12 @@ export default function SportsPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
-                style={{ width: '100%', justifyContent: 'center', padding: '14px 20px' }}
+                style={{ width: '100%', justifyContent: 'center' }}
               >
-                <WhatsAppIcon size={18} color="#FFFFFF" />
-                Connect on WhatsApp
+                <div className="btn-icon-circle">
+                  <WhatsAppIcon size={16} color="#FFFFFF" />
+                </div>
+                <span>Connect on WhatsApp</span>
               </a>
             </div>
           </div>

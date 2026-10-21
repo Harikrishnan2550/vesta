@@ -100,7 +100,7 @@ export default function ConstructionPage() {
     {
       id: 'budget',
       name: 'Budget Package',
-      rate: '₹1,900',
+      rate: '₹1,999',
       unit: '/ SQFT',
       tagline: 'High-quality, cost-efficient residential construction',
       featured: false,
@@ -124,7 +124,7 @@ export default function ConstructionPage() {
     {
       id: 'standard',
       name: 'Standard Package',
-      rate: '₹2,100',
+      rate: '₹2,199',
       unit: '/ SQFT',
       tagline: 'Enhanced specifications with branded electrical & plumbing',
       featured: true,
@@ -149,7 +149,7 @@ export default function ConstructionPage() {
     {
       id: 'premium',
       name: 'Premium Package',
-      rate: '₹2,400',
+      rate: '₹2,499',
       unit: '/ SQFT',
       tagline: 'Luxury finishes, teak wood, modular kitchen & false ceilings',
       featured: false,
@@ -279,18 +279,20 @@ export default function ConstructionPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-whatsapp"
-                  style={{ padding: '14px 28px' }}
                 >
-                  <WhatsAppIcon size={18} color="#FFFFFF" />
-                  Inquire on WhatsApp
+                  <div className="btn-icon-circle">
+                    <WhatsAppIcon size={16} color="#FFFFFF" />
+                  </div>
+                  <span>Inquire on WhatsApp</span>
                 </a>
                 <a
                   href="#packages"
                   className="btn btn-outline-gold"
-                  style={{ padding: '14px 28px' }}
                 >
-                  View Construction Packages
-                  <ArrowRight size={18} />
+                  <span>View Construction Packages</span>
+                  <div className="btn-icon-circle">
+                    <ArrowRight size={15} />
+                  </div>
                 </a>
               </div>
             </div>
@@ -535,6 +537,7 @@ export default function ConstructionPage() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: 'clamp(20px, 3vw, 28px)',
               marginBottom: '32px',
+              paddingTop: '20px',
             }}
           >
             {packages.map((pkg) => (
@@ -551,23 +554,31 @@ export default function ConstructionPage() {
                   display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',
+                  overflow: 'visible',
+                  boxShadow: pkg.featured
+                    ? '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(245, 166, 35, 0.2)'
+                    : undefined,
                 }}
               >
                 {pkg.featured && (
                   <div
                     style={{
                       position: 'absolute',
-                      top: '-12px',
+                      top: '-14px',
                       left: '50%',
                       transform: 'translateX(-50%)',
                       backgroundColor: 'var(--gold-primary)',
-                      color: '#000000',
+                      color: '#070709',
                       fontSize: '0.75rem',
-                      fontWeight: 900,
-                      padding: '4px 14px',
+                      fontFamily: "'Montserrat', sans-serif",
+                      fontWeight: 800,
+                      padding: '5px 18px',
                       borderRadius: '20px',
                       textTransform: 'uppercase',
-                      letterSpacing: '0.1em',
+                      letterSpacing: '0.12em',
+                      boxShadow: '0 4px 16px rgba(245, 166, 35, 0.5)',
+                      zIndex: 10,
+                      whiteSpace: 'nowrap',
                     }}
                   >
                     Most Popular
@@ -815,10 +826,11 @@ export default function ConstructionPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp"
-            style={{ padding: '14px 32px' }}
           >
-            <WhatsAppIcon size={18} color="#FFFFFF" />
-            Inquire for Project Analysis
+            <div className="btn-icon-circle">
+              <WhatsAppIcon size={16} color="#FFFFFF" />
+            </div>
+            <span>Inquire for Project Analysis</span>
           </a>
         </div>
       </section>

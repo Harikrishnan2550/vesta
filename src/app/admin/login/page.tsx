@@ -200,8 +200,10 @@ export default function AdminLoginPage() {
             className="btn btn-primary"
             style={{ width: '100%', marginTop: '10px', padding: '14px' }}
           >
-            {loading ? 'Authenticating...' : 'Sign In to Dashboard'}
-            <ArrowRight size={16} />
+            <span>{loading ? 'Authenticating...' : 'Sign In to Dashboard'}</span>
+            <div className="btn-icon-circle" style={{ background: 'rgba(0, 0, 0, 0.15)', color: '#000000' }}>
+              <ArrowRight size={15} />
+            </div>
           </button>
         </form>
 

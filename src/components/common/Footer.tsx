@@ -266,10 +266,12 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-sm"
-              style={{ width: '100%' }}
+              style={{ width: '100%', justifyContent: 'center' }}
             >
-              <WhatsAppIcon size={16} color="#FFFFFF" />
-              Message on WhatsApp
+              <div className="btn-icon-circle">
+                <WhatsAppIcon size={15} color="#FFFFFF" />
+              </div>
+              <span>Message on WhatsApp</span>
             </a>
           </div>
         </div>

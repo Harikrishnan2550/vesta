@@ -4,12 +4,13 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
 
 // Fallback seed items for instant rendering during build or offline state
 const FALLBACK_ITEMS: GalleryItem[] = [
+  // Builders & Developers (Construction)
   {
     _id: 'fallback_c1',
     title: 'Commercial Corporate Hub — Kerala Central',
     category: 'construction',
     imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
-    altText: 'Modern commercial corporate architectural building by Vesta Future Builders',
+    altText: 'Commercial Corporate Hub — Kerala Central',
     description: 'Multi-story commercial complex featuring modern glass facade and energy-efficient structural design.',
     isFeatured: true,
     sortOrder: 1,
@@ -18,25 +19,51 @@ const FALLBACK_ITEMS: GalleryItem[] = [
   },
   {
     _id: 'fallback_c2',
-    title: 'Luxury Residential Waterfront Villa',
+    title: 'Modern Tropical House at Dusk',
     category: 'construction',
-    imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
-    altText: 'Architectural luxury modern villa development',
-    description: 'Contemporary architectural residence engineered with sustainable construction techniques.',
+    imageUrl: '/images/Modern Tropical House at Dusk.png',
+    altText: 'Modern Tropical House at Dusk',
+    description: '',
     isFeatured: true,
     sortOrder: 2,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
   {
+    _id: 'fallback_c3',
+    title: 'Modern Tropical Villa After Rain',
+    category: 'construction',
+    imageUrl: '/images/construction/Modern Tropical Villa After Rain.png',
+    altText: 'Modern Tropical Villa After Rain',
+    description: '',
+    isFeatured: false,
+    sortOrder: 7,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    _id: 'fallback_c4',
+    title: 'Modern Tropical Villa at Dusk',
+    category: 'construction',
+    imageUrl: '/images/construction/Modern Tropical Villa at Dusk.png',
+    altText: 'Modern Tropical Villa at Dusk',
+    description: '',
+    isFeatured: false,
+    sortOrder: 8,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+
+  // Crabs & Fish Farm
+  {
     _id: 'fallback_f1',
-    title: 'Modern Brackish Water Crab Aquaculture Ponds',
+    title: 'Mud Crab Farm Under Tropical Skies',
     category: 'crabs-fish',
-    imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop',
-    altText: 'Sustainable aquaculture crab and marine farming facility',
-    description: 'Controlled salinity aquaculture facility for high-yield mud crab rearing.',
+    imageUrl: '/images/crabs-fish/Mud Crab Farm Under Tropical Skies.png',
+    altText: 'Mud Crab Farm Under Tropical Skies',
+    description: '',
     isFeatured: true,
-    sortOrder: 5,
+    sortOrder: 3,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
@@ -45,34 +72,36 @@ const FALLBACK_ITEMS: GalleryItem[] = [
     title: 'High-Density Freshwater Biofloc Fish Tanks',
     category: 'crabs-fish',
     imageUrl: 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=1200&auto=format&fit=crop',
-    altText: 'Scientific biofloc fish cultivation system',
+    altText: 'High-Density Freshwater Biofloc Fish Tanks',
     description: 'State-of-the-art water purification, oxygenation, and eco-friendly feeding cycles.',
     isFeatured: true,
-    sortOrder: 6,
+    sortOrder: 4,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
+
+  // Sports Infrastructure
   {
     _id: 'fallback_s1',
-    title: 'Championship Multi-Sport Synthetic Turf Arena',
+    title: 'Vivid Urban Futsal Field Panorama',
     category: 'sports',
-    imageUrl: 'https://images.unsplash.com/photo-1529900245534-47fbf8204b61?q=80&w=1200&auto=format&fit=crop',
-    altText: 'FIFA grade football and multisport synthetic turf arena',
-    description: 'All-weather shock-absorbing artificial turf installation with professional drainage.',
+    imageUrl: '/images/sports/Vivid Urban Futsal Field Panorama.png',
+    altText: 'Vivid Urban Futsal Field Panorama',
+    description: '',
     isFeatured: true,
-    sortOrder: 9,
+    sortOrder: 5,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
   {
     _id: 'fallback_s2',
-    title: 'Indoor Wooden Badminton Stadium & Court',
+    title: 'Symmetrical Blue Badminton Hall',
     category: 'sports',
-    imageUrl: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=1200&auto=format&fit=crop',
-    altText: 'Professional indoor badminton wooden court with LED lighting',
-    description: 'BWF certified wooden subflooring with anti-glare sports lighting fixtures.',
+    imageUrl: '/images/sports/Symmetrical Blue Badminton Hall.png',
+    altText: 'Symmetrical Blue Badminton Hall',
+    description: '',
     isFeatured: true,
-    sortOrder: 10,
+    sortOrder: 6,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
@@ -104,7 +133,7 @@ export async function fetchGalleryItems(category?: string, featured?: boolean): 
     if (featured !== undefined) {
       items = items.filter((i) => i.isFeatured === featured);
     }
-    return items;
+    return items.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
   }
 }
 
@@ -200,6 +229,9 @@ export function formatImageUrl(url: string): string {
   if (!url) return '';
   if (url.startsWith('http://') || url.startsWith('https://')) {
     return url;
+  }
+  if (url.startsWith('/')) {
+    return encodeURI(url);
   }
   const baseUrl = process.env.NEXT_PUBLIC_API_URL
     ? process.env.NEXT_PUBLIC_API_URL.replace('/api', '')
