@@ -10,12 +10,14 @@ import { siteConfig } from '@/config/site';
 export const metadata: Metadata = {
   metadataBase: new URL('https://vestafuture.in'),
   title: {
-    default: 'Vesta Future Pvt Ltd | Construction • Sports Infrastructure • Crab & Fish Hatchery',
-    template: '%s | Vesta Future Pvt Ltd',
+    default: 'Vesta Future Properties Pvt. Ltd. | Construction & Sports Infrastructure Kerala',
+    template: '%s | Vesta Future Properties Pvt. Ltd.',
   },
   description:
-    'Vesta Future Pvt Ltd is an established multi-sector business group headquartered in Cheppad, Alappuzha, Kerala. Operating across Vesta Future Builders & Developers, Vesta Future De Sports Infrastructure, and The Seagull Crab & Fish Hatchery.',
+    'Vesta Future Properties Pvt. Ltd., based in Cheppad, Alappuzha, Kerala, offers residential construction, sports infrastructure development, and crab and fish hatchery services.',
   keywords: [
+    'Vesta Future Properties Pvt. Ltd.',
+    'Vesta Future Properties',
     'Vesta Future Pvt Ltd',
     'Vesta Future',
     'Vesta Future Builders and Developers',
@@ -31,9 +33,9 @@ export const metadata: Metadata = {
     'Vesta Future Cheppad',
     'Kerala Business Group',
   ],
-  authors: [{ name: 'Vesta Future Pvt Ltd', url: 'https://vestafuture.in' }],
-  creator: 'Vesta Future Pvt Ltd',
-  publisher: 'Vesta Future Pvt Ltd',
+  authors: [{ name: 'Vesta Future Properties Pvt. Ltd.', url: 'https://vestafuture.in' }],
+  creator: 'Vesta Future Properties Pvt. Ltd.',
+  publisher: 'Vesta Future Properties Pvt. Ltd.',
   formatDetection: {
     email: true,
     address: true,
@@ -43,17 +45,17 @@ export const metadata: Metadata = {
     canonical: 'https://vestafuture.in',
   },
   openGraph: {
-    title: 'Vesta Future Pvt Ltd | Construction • Sports Infrastructure • Marine Aquaculture',
+    title: 'Vesta Future Properties Pvt. Ltd. | Construction & Sports Infrastructure Kerala',
     description:
-      'Engineering excellence in residential construction, world-class turnkey sports arenas, and scientific aquaculture systems in Kerala, India.',
+      'Vesta Future Properties Pvt. Ltd., based in Cheppad, Alappuzha, Kerala, offers residential construction, sports infrastructure development, and crab and fish hatchery services.',
     url: 'https://vestafuture.in',
-    siteName: 'Vesta Future Pvt Ltd',
+    siteName: 'Vesta Future Properties Pvt. Ltd.',
     images: [
       {
         url: '/logos/vesta-group.png',
         width: 1200,
         height: 630,
-        alt: 'Vesta Future Pvt Ltd Corporate Brand',
+        alt: 'Vesta Future Properties Pvt. Ltd. Corporate Brand',
       },
     ],
     locale: 'en_IN',
@@ -61,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vesta Future Pvt Ltd | Corporate Group Kerala',
+    title: 'Vesta Future Properties Pvt. Ltd. | Construction & Sports Infrastructure Kerala',
     description:
-      'Engineering excellence in residential construction, turnkey sports arenas, and scientific marine aquaculture.',
+      'Vesta Future Properties Pvt. Ltd., based in Cheppad, Alappuzha, Kerala, offers residential construction, sports infrastructure development, and crab and fish hatchery services.',
     images: ['/logos/vesta-group.png'],
   },
   robots: {
@@ -90,13 +92,13 @@ export default function RootLayout({
       {
         '@type': 'Corporation',
         '@id': 'https://vestafuture.in/#corporation',
-        name: 'Vesta Future Pvt Ltd',
-        legalName: 'Vesta Future Pvt. Ltd.',
+        name: 'Vesta Future Properties Pvt. Ltd.',
+        legalName: 'Vesta Future Properties Pvt. Ltd.',
         url: 'https://vestafuture.in',
         logo: 'https://vestafuture.in/logos/vesta-group.png',
         image: 'https://vestafuture.in/logos/vesta-group.png',
         description:
-          'A multi-sector corporate enterprise operating across residential construction, turnkey sports infrastructure, and scientific marine aquaculture.',
+          'Vesta Future Properties Pvt. Ltd., based in Cheppad, Alappuzha, Kerala, offers residential construction, sports infrastructure development, and crab and fish hatchery services.',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'NH 66, Pulimootil Building',
@@ -141,7 +143,7 @@ export default function RootLayout({
         '@type': 'WebSite',
         '@id': 'https://vestafuture.in/#website',
         url: 'https://vestafuture.in',
-        name: 'Vesta Future Pvt Ltd',
+        name: 'Vesta Future Properties Pvt. Ltd.',
         publisher: {
           '@id': 'https://vestafuture.in/#corporation',
         },
