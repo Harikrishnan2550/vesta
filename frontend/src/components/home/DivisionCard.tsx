@@ -283,7 +283,7 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
                   color={accentColor}
                   style={{ flexShrink: 0, marginTop: '2px' }}
                 />
-                <span>
+                <span style={{ flex: 1, minWidth: 0, wordBreak: 'break-word' }}>
                   <AnimatedCounter text={item} />
                 </span>
               </div>
@@ -294,7 +294,7 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr auto',
+              gridTemplateColumns: 'minmax(0, 1fr) auto',
               gap: '12px',
               borderTop: '1px solid rgba(0, 0, 0, 0.08)',
               paddingTop: '20px',

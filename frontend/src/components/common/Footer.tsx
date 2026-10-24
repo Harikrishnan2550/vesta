@@ -38,8 +38,8 @@ export const Footer: React.FC = () => {
           }}
         >
           {/* Column 1: Parent Brand Overview */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ width: '230px', height: '60px', position: 'relative' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: 0 }}>
+            <div style={{ width: '230px', maxWidth: '100%', height: '60px', position: 'relative' }}>
               <Image
                 src="/logos/vesta-group.png"
                 alt="Vesta Future Pvt Ltd"
@@ -241,7 +241,7 @@ export const Footer: React.FC = () => {
               </div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                 <Phone size={16} color="var(--gold-primary)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', minWidth: 0, wordBreak: 'break-word' }}>
                   <a
                     href="tel:+919566866144"
                     style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.85)', textDecoration: 'none' }}

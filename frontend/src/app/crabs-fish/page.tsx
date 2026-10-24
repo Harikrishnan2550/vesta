@@ -411,8 +411,9 @@ export default function CrabsFishPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp"
+            style={{ maxWidth: '100%', whiteSpace: 'normal', textAlign: 'center', wordBreak: 'break-word' }}
           >
-            <div className="btn-icon-circle">
+            <div className="btn-icon-circle" style={{ flexShrink: 0 }}>
               <WhatsAppIcon size={16} color="#FFFFFF" />
             </div>
             <span>Connect on WhatsApp</span>

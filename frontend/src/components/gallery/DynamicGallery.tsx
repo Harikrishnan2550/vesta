@@ -175,8 +175,8 @@ export const DynamicGallery: React.FC<DynamicGalleryProps> = ({
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-            gap: '28px',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
+            gap: 'clamp(16px, 3vw, 28px)',
           }}
         >
           {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -214,8 +214,8 @@ export const DynamicGallery: React.FC<DynamicGalleryProps> = ({
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-            gap: '28px',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
+            gap: 'clamp(16px, 3vw, 28px)',
           }}
         >
           {items.map((item, idx) => (

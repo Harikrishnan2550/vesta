@@ -95,93 +95,272 @@ export default function ContactPage() {
         />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ maxWidth: '800px' }}>
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                backgroundColor: 'rgba(245, 166, 35, 0.12)',
-                border: '1px solid rgba(245, 166, 35, 0.35)',
-                color: 'var(--gold-primary)',
-                padding: '6px 14px',
-                borderRadius: '30px',
-                fontSize: '0.76rem',
-                fontWeight: 800,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                marginBottom: '16px',
-              }}
-            >
-              <Sparkles size={14} />
-              Corporate Communications &amp; Inquiries
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))',
+              gap: 'clamp(32px, 5vw, 56px)',
+              alignItems: 'center',
+            }}
+          >
+            {/* Left Column: Heading, Lead & HQ Badges */}
+            <div>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'rgba(245, 166, 35, 0.12)',
+                  border: '1px solid rgba(245, 166, 35, 0.35)',
+                  color: 'var(--gold-primary)',
+                  padding: '6px 14px',
+                  borderRadius: '30px',
+                  fontSize: '0.76rem',
+                  fontWeight: 800,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  marginBottom: '16px',
+                }}
+              >
+                <Sparkles size={14} />
+                Corporate Communications &amp; Inquiries
+              </div>
+
+              <h1
+                className="heading-display"
+                style={{
+                  fontSize: 'clamp(2.2rem, 3.8vw, 3.6rem)',
+                  color: '#FFFFFF',
+                  lineHeight: '1.14',
+                  marginBottom: '18px',
+                  textTransform: 'uppercase',
+                }}
+              >
+                Contact Vesta Future Headquarters
+              </h1>
+
+              <p
+                className="text-lead"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  fontSize: '1.05rem',
+                  lineHeight: '1.7',
+                  marginBottom: '24px',
+                }}
+              >
+                Reach out directly to our corporate leadership team for civil engineering contracts,
+                turnkey sports facility execution, scientific hatchery systems, or executive inquiries.
+              </p>
+
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  padding: '10px 18px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  borderRadius: '12px',
+                  fontSize: '0.85rem',
+                  color: 'rgba(255, 255, 255, 0.78)',
+                }}
+              >
+                <MapPin size={16} color="var(--gold-primary)" />
+                <span>NH 66, Pulimootil Building, Cheppad P.O., Alappuzha, Kerala</span>
+              </div>
             </div>
 
-            <h1
-              className="heading-display"
+            {/* Right Column: Direct Executive Channels Panel */}
+            <div
               style={{
-                fontSize: 'clamp(2.2rem, 4.2vw, 3.6rem)',
-                color: '#FFFFFF',
-                lineHeight: '1.14',
-                marginBottom: '18px',
-                textTransform: 'uppercase',
+                backgroundColor: '#121216',
+                border: '1px solid rgba(245, 166, 35, 0.28)',
+                borderRadius: '20px',
+                padding: 'clamp(24px, 3vw, 36px)',
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(245, 166, 35, 0.08)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '18px',
               }}
             >
-              Contact Vesta Future Headquarters
-            </h1>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  paddingBottom: '14px',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                }}
+              >
+                <div>
+                  <span
+                    style={{
+                      fontFamily: "'Montserrat', sans-serif",
+                      fontSize: '0.74rem',
+                      fontWeight: 800,
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      color: 'var(--gold-primary)',
+                      display: 'block',
+                    }}
+                  >
+                    Direct Channels
+                  </span>
+                  <h3
+                    style={{
+                      fontSize: '1.2rem',
+                      fontWeight: 700,
+                      color: '#FFFFFF',
+                      marginTop: '3px',
+                    }}
+                  >
+                    Executive Connect Desk
+                  </h3>
+                </div>
 
-            <p
-              className="text-lead"
-              style={{
-                color: 'rgba(255, 255, 255, 0.8)',
-                fontSize: '1.08rem',
-                lineHeight: '1.7',
-                marginBottom: '28px',
-              }}
-            >
-              Reach out directly to our corporate leadership team for civil engineering contracts,
-              turnkey sports facility execution, scientific hatchery systems, or executive inquiries.
-            </p>
+                <div
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    backgroundColor: 'rgba(16, 185, 129, 0.12)',
+                    border: '1px solid rgba(16, 185, 129, 0.35)',
+                    color: '#10B981',
+                    padding: '5px 12px',
+                    borderRadius: '20px',
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  <span
+                    style={{
+                      width: '7px',
+                      height: '7px',
+                      borderRadius: '50%',
+                      backgroundColor: '#10B981',
+                      boxShadow: '0 0 8px #10B981',
+                    }}
+                  />
+                  Live Desk
+                </div>
+              </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
-              <a
-                href={waUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp"
+              {/* 2x2 Hotline Action Cards */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
+                  gap: '12px',
+                  minWidth: 0,
+                }}
               >
-                <div className="btn-icon-circle">
-                  <WhatsAppIcon size={16} color="#FFFFFF" />
-                </div>
-                <span>WhatsApp: +91 95668 66144</span>
-              </a>
-              <a
-                href="tel:+919566866144"
-                className="btn btn-outline-gold"
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
+                  style={{
+                    width: '100%',
+                    justifyContent: 'flex-start',
+                    padding: '14px 16px',
+                  }}
+                >
+                  <div className="btn-icon-circle">
+                    <WhatsAppIcon size={16} color="#FFFFFF" />
+                  </div>
+                  <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+                    <span style={{ display: 'block', fontSize: '0.68rem', opacity: 0.85, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Instant Chat
+                    </span>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 800 }}>
+                      WhatsApp Hotline
+                    </span>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+919566866144"
+                  className="btn btn-outline-gold"
+                  style={{
+                    width: '100%',
+                    justifyContent: 'flex-start',
+                    padding: '14px 16px',
+                  }}
+                >
+                  <div className="btn-icon-circle">
+                    <Phone size={15} />
+                  </div>
+                  <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+                    <span style={{ display: 'block', fontSize: '0.68rem', opacity: 0.75, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Primary Mobile
+                    </span>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 800 }}>
+                      +91 95668 66144
+                    </span>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+919744048503"
+                  className="btn btn-outline-light"
+                  style={{
+                    width: '100%',
+                    justifyContent: 'flex-start',
+                    padding: '14px 16px',
+                  }}
+                >
+                  <div className="btn-icon-circle">
+                    <Phone size={15} />
+                  </div>
+                  <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+                    <span style={{ display: 'block', fontSize: '0.68rem', opacity: 0.75, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Secondary Line
+                    </span>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 800 }}>
+                      +91 97440 48503
+                    </span>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:04792415244"
+                  className="btn btn-outline-light"
+                  style={{
+                    width: '100%',
+                    justifyContent: 'flex-start',
+                    padding: '14px 16px',
+                  }}
+                >
+                  <div className="btn-icon-circle">
+                    <PhoneCall size={15} />
+                  </div>
+                  <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+                    <span style={{ display: 'block', fontSize: '0.68rem', opacity: 0.75, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      Cheppad Landline
+                    </span>
+                    <span style={{ fontSize: '0.85rem', fontWeight: 800 }}>
+                      0479-2415244
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+              {/* Operating Hours Note */}
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  paddingTop: '6px',
+                  fontSize: '0.78rem',
+                  color: 'rgba(255, 255, 255, 0.65)',
+                }}
               >
-                <div className="btn-icon-circle">
-                  <Phone size={15} />
-                </div>
-                <span>Call: +91 95668 66144</span>
-              </a>
-              <a
-                href="tel:+919744048503"
-                className="btn btn-outline-light"
-              >
-                <div className="btn-icon-circle">
-                  <Phone size={15} />
-                </div>
-                <span>Line 2: +91 97440 48503</span>
-              </a>
-              <a
-                href="tel:04792415244"
-                className="btn btn-outline-light"
-              >
-                <div className="btn-icon-circle">
-                  <PhoneCall size={15} />
-                </div>
-                <span>Landline: 0479-2415244</span>
-              </a>
+                <Clock size={14} color="var(--gold-primary)" />
+                <span>Office Hours: Monday – Saturday • 9:00 AM – 6:00 PM IST</span>
+              </div>
             </div>
           </div>
         </div>
@@ -190,25 +369,27 @@ export default function ContactPage() {
       {/* ========================================================================= */}
       {/* 2. CONTACT DETAILS & INQUIRY FORM                                         */}
       {/* ========================================================================= */}
-      <section className="section-padding" style={{ backgroundColor: '#070709' }}>
+      <section className="section-padding" style={{ backgroundColor: '#070709', overflow: 'hidden' }}>
         <div className="container">
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
               gap: 'clamp(28px, 4vw, 48px)',
+              alignItems: 'start',
             }}
           >
             {/* Left Column: HQ Cards & Direct Channels */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '22px', minWidth: 0, width: '100%' }}>
               {/* Registered Address Card */}
               <div
                 style={{
                   backgroundColor: '#121216',
-                  padding: '30px',
+                  padding: 'clamp(20px, 4vw, 30px)',
                   borderRadius: '16px',
                   border: '1px solid rgba(255, 255, 255, 0.08)',
                   boxShadow: '0 12px 30px rgba(0, 0, 0, 0.5)',
+                  boxSizing: 'border-box',
                 }}
               >
                 <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
@@ -227,7 +408,7 @@ export default function ContactPage() {
                   >
                     <MapPin size={22} color="var(--gold-primary)" />
                   </div>
-                  <div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <h3 style={{ fontSize: '1.15rem', color: '#FFFFFF', fontWeight: 700, marginBottom: '6px' }}>
                       Registered Headquarters
                     </h3>
@@ -254,10 +435,11 @@ export default function ContactPage() {
               <div
                 style={{
                   backgroundColor: 'linear-gradient(145deg, #121614 0%, #0D120F 100%)',
-                  padding: '30px',
+                  padding: 'clamp(20px, 4vw, 30px)',
                   borderRadius: '16px',
                   border: '1px solid rgba(37, 211, 102, 0.35)',
                   boxShadow: '0 14px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(37, 211, 102, 0.08)',
+                  boxSizing: 'border-box',
                 }}
               >
                 <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
@@ -276,7 +458,7 @@ export default function ContactPage() {
                   >
                     <WhatsAppIcon size={24} color="#25D366" />
                   </div>
-                  <div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <span
                       style={{
                         fontSize: '0.72rem',
@@ -301,9 +483,10 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-whatsapp btn-sm"
+                      style={{ width: 'fit-content', maxWidth: '100%' }}
                     >
                       <WhatsAppIcon size={16} color="#FFFFFF" />
-                      Chat on WhatsApp (+91 95668 66144)
+                      <span>Chat on WhatsApp</span>
                     </a>
                   </div>
                 </div>
@@ -313,20 +496,23 @@ export default function ContactPage() {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))',
                   gap: '14px',
+                  minWidth: 0,
                 }}
               >
                 {/* Primary Mobile */}
                 <div
                   style={{
                     backgroundColor: '#121216',
-                    padding: '22px 20px',
+                    padding: '20px 18px',
                     borderRadius: '14px',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
+                    minWidth: 0,
+                    boxSizing: 'border-box',
                   }}
                 >
                   <div>
@@ -359,12 +545,14 @@ export default function ContactPage() {
                 <div
                   style={{
                     backgroundColor: '#121216',
-                    padding: '22px 20px',
+                    padding: '20px 18px',
                     borderRadius: '14px',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
+                    minWidth: 0,
+                    boxSizing: 'border-box',
                   }}
                 >
                   <div>
@@ -397,12 +585,14 @@ export default function ContactPage() {
                 <div
                   style={{
                     backgroundColor: '#121216',
-                    padding: '22px 20px',
+                    padding: '20px 18px',
                     borderRadius: '14px',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
+                    minWidth: 0,
+                    boxSizing: 'border-box',
                   }}
                 >
                   <div>
@@ -435,12 +625,14 @@ export default function ContactPage() {
                 <div
                   style={{
                     backgroundColor: '#121216',
-                    padding: '22px 20px',
+                    padding: '20px 18px',
                     borderRadius: '14px',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
+                    minWidth: 0,
+                    boxSizing: 'border-box',
                   }}
                 >
                   <div>
@@ -475,17 +667,20 @@ export default function ContactPage() {
               <div
                 style={{
                   backgroundColor: '#121216',
-                  padding: '22px 26px',
+                  padding: 'clamp(16px, 3.5vw, 22px) clamp(16px, 3.5vw, 26px)',
                   borderRadius: '14px',
                   border: '1px solid rgba(255, 255, 255, 0.08)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                  gap: '14px',
+                  boxSizing: 'border-box',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Instagram size={22} color="var(--gold-primary)" />
-                  <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: 0, flex: 1 }}>
+                  <Instagram size={22} color="var(--gold-primary)" style={{ flexShrink: 0 }} />
+                  <div style={{ minWidth: 0 }}>
                     <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#FFFFFF' }}>Instagram Profile</div>
                     <div style={{ fontSize: '0.76rem', color: 'rgba(255, 255, 255, 0.55)' }}>
                       Follow group developments
@@ -497,15 +692,16 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-gold btn-sm"
-                  style={{ padding: '8px 16px' }}
+                  style={{ padding: '8px 16px', flexShrink: 0 }}
                 >
-                  View Profile <ExternalLink size={12} />
+                  <span>View Profile</span>
+                  <ExternalLink size={12} />
                 </a>
               </div>
             </div>
 
             {/* Right Column: Executive Contact Form */}
-            <div>
+            <div style={{ minWidth: 0, width: '100%' }}>
               <ContactForm />
             </div>
           </div>

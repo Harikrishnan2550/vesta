@@ -553,7 +553,7 @@ export default function ConstructionPage() {
       {/* ========================================================================= */}
       {/* 4. RESIDENTIAL CONSTRUCTION PACKAGES (BUDGET, STANDARD, PREMIUM)          */}
       {/* ========================================================================= */}
-      <section id="packages" className="section-padding" style={{ backgroundColor: '#070709' }}>
+      <section id="packages" className="section-padding" style={{ backgroundColor: '#070709', overflow: 'hidden' }}>
         <div className="container">
           <SectionHeading
             eyebrow="Residential Construction Packages"
@@ -569,6 +569,8 @@ export default function ConstructionPage() {
               gap: 'clamp(20px, 3vw, 28px)',
               marginBottom: '32px',
               paddingTop: '20px',
+              minWidth: 0,
+              width: '100%',
             }}
           >
             {packages.map((pkg) => (
@@ -581,11 +583,14 @@ export default function ConstructionPage() {
                     ? '2px solid var(--gold-primary)'
                     : '1px solid rgba(255, 255, 255, 0.1)',
                   borderRadius: '18px',
-                  padding: '36px 28px',
+                  padding: 'clamp(24px, 4vw, 36px) clamp(16px, 3.5vw, 26px)',
                   display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',
                   overflow: 'visible',
+                  maxWidth: '100%',
+                  minWidth: 0,
+                  boxSizing: 'border-box',
                   boxShadow: pkg.featured
                     ? '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(245, 166, 35, 0.2)'
                     : undefined,
@@ -645,7 +650,7 @@ export default function ConstructionPage() {
                   <span
                     style={{
                       fontFamily: 'var(--font-display)',
-                      fontSize: '2.4rem',
+                      fontSize: 'clamp(1.9rem, 4vw, 2.4rem)',
                       fontWeight: 800,
                       color: 'var(--gold-primary)',
                     }}
@@ -665,6 +670,7 @@ export default function ConstructionPage() {
                     gap: '12px',
                     marginBottom: '32px',
                     flexGrow: 1,
+                    minWidth: 0,
                   }}
                 >
                   {pkg.specs.map((sp, sIdx) => (
@@ -676,6 +682,7 @@ export default function ConstructionPage() {
                         gap: '10px',
                         fontSize: '0.84rem',
                         color: 'rgba(255, 255, 255, 0.85)',
+                        minWidth: 0,
                       }}
                     >
                       <Check
@@ -683,7 +690,9 @@ export default function ConstructionPage() {
                         color="var(--gold-primary)"
                         style={{ flexShrink: 0, marginTop: '3px' }}
                       />
-                      <span>{sp}</span>
+                      <span style={{ flex: 1, minWidth: 0, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                        {sp}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -695,10 +704,17 @@ export default function ConstructionPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={pkg.featured ? 'btn btn-gold' : 'btn btn-outline-gold'}
-                  style={{ width: '100%', justifyContent: 'center' }}
+                  style={{
+                    width: '100%',
+                    justifyContent: 'center',
+                    whiteSpace: 'normal',
+                    textAlign: 'center',
+                    wordBreak: 'break-word',
+                    padding: '12px 16px',
+                  }}
                 >
-                  <WhatsAppIcon size={16} color="currentColor" />
-                  Inquire for {pkg.name}
+                  <WhatsAppIcon size={16} color="currentColor" style={{ flexShrink: 0 }} />
+                  <span>Inquire for {pkg.name}</span>
                 </a>
               </div>
             ))}
@@ -743,7 +759,7 @@ export default function ConstructionPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: '24px',
             }}
           >
@@ -766,7 +782,7 @@ export default function ConstructionPage() {
                   color="var(--gold-primary)"
                   style={{ flexShrink: 0, marginTop: '2px' }}
                 />
-                <div>
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <h4
                     style={{
                       fontSize: '1rem',
@@ -857,8 +873,9 @@ export default function ConstructionPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp"
+            style={{ maxWidth: '100%', whiteSpace: 'normal', textAlign: 'center', wordBreak: 'break-word' }}
           >
-            <div className="btn-icon-circle">
+            <div className="btn-icon-circle" style={{ flexShrink: 0 }}>
               <WhatsAppIcon size={16} color="#FFFFFF" />
             </div>
             <span>Inquire for Project Analysis</span>

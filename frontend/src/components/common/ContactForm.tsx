@@ -80,10 +80,12 @@ _Sent via vestafuture.in contact form_`;
       onSubmit={handleSubmit}
       style={{
         backgroundColor: '#FFFFFF',
-        padding: '36px',
+        padding: 'clamp(20px, 4vw, 36px)',
         borderRadius: '12px',
         border: '1px solid var(--border-light)',
         boxShadow: 'var(--shadow-card)',
+        boxSizing: 'border-box',
+        maxWidth: '100%',
       }}
     >
       <h3
@@ -132,7 +134,7 @@ _Sent via vestafuture.in contact form_`;
               }}
             >
               <WhatsAppIcon size={15} color="#FFFFFF" />
-              <span>Open in WhatsApp (+91 95668 66144)</span>
+              <span>Open in WhatsApp</span>
             </a>
           )}
         </div>
@@ -158,7 +160,7 @@ _Sent via vestafuture.in contact form_`;
         </div>
       )}
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '16px', marginBottom: '16px' }}>
         <div>
           <label
             style={{
@@ -223,7 +225,7 @@ _Sent via vestafuture.in contact form_`;
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '16px', marginBottom: '16px' }}>
         <div>
           <label
             style={{
@@ -342,6 +344,7 @@ _Sent via vestafuture.in contact form_`;
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          flexWrap: 'wrap',
           gap: '8px',
           fontSize: '0.75rem',
           color: 'var(--text-dark-secondary)',

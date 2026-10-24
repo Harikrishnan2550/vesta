@@ -22,9 +22,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       style={{
         textAlign: align,
         maxWidth: align === 'center' ? '920px' : '820px',
-        margin: align === 'center' ? '0 auto 60px auto' : '0 0 60px 0',
+        margin: align === 'center' ? '0 auto clamp(28px, 4.5vw, 54px) auto' : '0 0 clamp(28px, 4.5vw, 54px) 0',
         position: 'relative',
         zIndex: 3,
+        width: '100%',
+        boxSizing: 'border-box',
       }}
     >
       {eyebrow && (
@@ -42,9 +44,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         className="heading-section"
         style={{
           color: darkTheme ? '#FFFFFF' : 'var(--text-dark-primary)',
-          marginBottom: subtitle ? '18px' : '0',
+          marginBottom: subtitle ? '14px' : '0',
           textTransform: 'uppercase',
           letterSpacing: '-0.02em',
+          wordBreak: 'break-word',
+          overflowWrap: 'break-word',
         }}
       >
         {title}
@@ -54,8 +58,9 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           className="text-lead"
           style={{
             color: darkTheme ? 'rgba(255, 255, 255, 0.72)' : 'var(--text-dark-secondary)',
-            fontSize: '1.05rem',
-            lineHeight: '1.7',
+            fontSize: 'clamp(0.9rem, 1.2vw, 1.05rem)',
+            lineHeight: '1.65',
+            wordBreak: 'break-word',
           }}
         >
           {subtitle}

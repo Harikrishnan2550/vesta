@@ -287,11 +287,13 @@ export default function SportsPage() {
               <h1
                 className="heading-display"
                 style={{
-                  fontSize: 'clamp(2.2rem, 4.2vw, 3.6rem)',
+                  fontSize: 'clamp(1.65rem, 3.8vw, 3.4rem)',
                   color: '#FFFFFF',
-                  lineHeight: '1.12',
+                  lineHeight: '1.14',
                   marginBottom: '16px',
                   textTransform: 'uppercase',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
                 }}
               >
                 VESTA FUTURE De SPORTS INFRASTRUCTURE PVT. LTD.
@@ -300,11 +302,13 @@ export default function SportsPage() {
               <div
                 style={{
                   fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(1.15rem, 1.8vw, 1.4rem)',
+                  fontSize: 'clamp(1rem, 2vw, 1.35rem)',
                   fontWeight: 700,
                   color: 'var(--gold-primary)',
                   marginBottom: '18px',
                   letterSpacing: '0.02em',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
                 }}
               >
                 Building Better Spaces for Better Sports.
@@ -820,6 +824,7 @@ export default function SportsPage() {
         style={{
           backgroundColor: '#121216',
           borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+          overflow: 'hidden',
         }}
       >
         <div className="container">
@@ -828,14 +833,17 @@ export default function SportsPage() {
               backgroundColor: '#16161D',
               border: '1px solid rgba(245, 166, 35, 0.3)',
               borderRadius: '20px',
-              padding: 'clamp(28px, 4vw, 56px)',
+              padding: 'clamp(20px, 3.5vw, 48px) clamp(16px, 3.5vw, 40px)',
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: 'clamp(24px, 4vw, 40px)',
               alignItems: 'center',
+              width: '100%',
+              maxWidth: '100%',
+              boxSizing: 'border-box',
             }}
           >
-            <div>
+            <div style={{ minWidth: 0 }}>
               <div
                 style={{
                   fontFamily: 'var(--font-display)',
@@ -851,9 +859,11 @@ export default function SportsPage() {
               </div>
               <h2
                 style={{
-                  fontSize: 'clamp(1.7rem, 2.8vw, 2.3rem)',
+                  fontSize: 'clamp(1.4rem, 2.5vw, 2.3rem)',
                   fontWeight: 700,
                   marginBottom: '14px',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
                 }}
               >
                 Get in Touch for Turnkey Sports Solutions
@@ -871,17 +881,17 @@ export default function SportsPage() {
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.9rem' }}>
-                  <MapPin size={18} color="var(--gold-primary)" />
-                  <span style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '0.9rem' }}>
+                  <MapPin size={18} color="var(--gold-primary)" style={{ flexShrink: 0, marginTop: '3px' }} />
+                  <span style={{ color: 'rgba(255, 255, 255, 0.85)', flex: 1, minWidth: 0, wordBreak: 'break-word' }}>
                     NH 66, Pulimootil Building, Cheppad P.O., Alappuzha, Kerala
                   </span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.9rem' }}>
-                  <Mail size={18} color="var(--gold-primary)" />
+                  <Mail size={18} color="var(--gold-primary)" style={{ flexShrink: 0 }} />
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
-                    style={{ color: 'rgba(255, 255, 255, 0.85)', textDecoration: 'none' }}
+                    style={{ color: 'rgba(255, 255, 255, 0.85)', textDecoration: 'none', wordBreak: 'break-all' }}
                   >
                     {siteConfig.contact.email}
                   </a>
@@ -894,19 +904,26 @@ export default function SportsPage() {
                 backgroundColor: 'rgba(7, 7, 9, 0.65)',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '14px',
-                padding: '32px 28px',
+                padding: 'clamp(24px, 3.5vw, 32px) clamp(16px, 3vw, 24px)',
                 textAlign: 'center',
+                width: '100%',
+                maxWidth: '100%',
+                boxSizing: 'border-box',
+                minWidth: 0,
               }}
             >
-              <Trophy size={40} color="var(--gold-primary)" style={{ margin: '0 auto 16px auto' }} />
+              <Trophy size={36} color="var(--gold-primary)" style={{ margin: '0 auto 14px auto' }} />
               <div
                 style={{
                   fontFamily: 'var(--font-display)',
-                  fontSize: '1.25rem',
+                  fontSize: 'clamp(1.05rem, 2.2vw, 1.25rem)',
                   fontWeight: 800,
                   color: '#FFFFFF',
                   marginBottom: '8px',
                   textTransform: 'uppercase',
+                  lineHeight: '1.25',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
                 }}
               >
                 Building Better Spaces for Better Sports.
@@ -915,7 +932,7 @@ export default function SportsPage() {
                 style={{
                   fontSize: '0.85rem',
                   color: 'rgba(255, 255, 255, 0.65)',
-                  marginBottom: '24px',
+                  marginBottom: '22px',
                 }}
               >
                 Instant consultation available on WhatsApp.
@@ -926,9 +943,18 @@ export default function SportsPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
-                style={{ width: '100%', justifyContent: 'center' }}
+                style={{
+                  width: '100%',
+                  justifyContent: 'center',
+                  padding: '12px 14px',
+                  fontSize: 'clamp(0.78rem, 2vw, 0.85rem)',
+                  whiteSpace: 'normal',
+                  textAlign: 'center',
+                  wordBreak: 'break-word',
+                  boxSizing: 'border-box',
+                }}
               >
-                <div className="btn-icon-circle">
+                <div className="btn-icon-circle" style={{ flexShrink: 0 }}>
                   <WhatsAppIcon size={16} color="#FFFFFF" />
                 </div>
                 <span>Connect on WhatsApp</span>

@@ -258,7 +258,8 @@ export default function TrajectoryExperience() {
                     {isActive && <div className="nexus-node-glow" />}
                   </div>
                   <div className="nexus-node-info">
-                    <span className="nexus-node-year">{era.badgeYear}</span>
+                    <span className="nexus-node-year nexus-year-desktop">{era.badgeYear}</span>
+                    <span className="nexus-node-year nexus-year-mobile">{era.year}</span>
                     <span className="nexus-node-phase">{era.phase}</span>
                   </div>
                 </button>
@@ -273,11 +274,11 @@ export default function TrajectoryExperience() {
         <div className="nexus-showcase-card">
           {/* Top Hologram Status Line */}
           <div className="nexus-card-topbar">
-            <div className="nexus-topbar-left">
+            <div className="nexus-topbar-left" style={{ flex: 1, minWidth: 0 }}>
               <span className="nexus-topbar-status">{currentEra.statusBadge}</span>
             </div>
 
-            <div className="nexus-topbar-controls">
+            <div className="nexus-topbar-controls" style={{ flexShrink: 0 }}>
               <button
                 onClick={handlePrev}
                 className="nexus-arrow-btn"
@@ -310,7 +311,7 @@ export default function TrajectoryExperience() {
                   >
                     <IconComponent size={20} color={currentEra.iconColor} />
                   </div>
-                  <div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <span className="nexus-era-phase-tag">{currentEra.phase}</span>
                     <h3 className="nexus-era-heading">{currentEra.title}</h3>
                   </div>
@@ -322,15 +323,15 @@ export default function TrajectoryExperience() {
                 {/* Highlight Quote Box */}
                 <div className="nexus-highlight-box">
                   <Sparkles size={16} color="var(--gold-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                  <p>{currentEra.highlight}</p>
+                  <p style={{ margin: 0, flex: 1, minWidth: 0 }}>{currentEra.highlight}</p>
                 </div>
 
                 {/* Capability Chips */}
                 <div className="nexus-tags-list">
                   {currentEra.tags.map((tag) => (
                     <span key={tag} className="nexus-tag-chip">
-                      <CheckCircle2 size={12} color="var(--gold-primary)" />
-                      {tag}
+                      <CheckCircle2 size={12} color="var(--gold-primary)" style={{ flexShrink: 0 }} />
+                      <span style={{ minWidth: 0, wordBreak: 'break-word' }}>{tag}</span>
                     </span>
                   ))}
                 </div>
@@ -350,15 +351,39 @@ export default function TrajectoryExperience() {
                 </div>
 
                 <div className="nexus-era-actions">
-                  <Link href={currentEra.route} className="btn btn-primary">
+                  <Link
+                    href={currentEra.route}
+                    className="btn btn-primary"
+                    style={{
+                      width: '100%',
+                      justifyContent: 'center',
+                      padding: '12px 16px',
+                      whiteSpace: 'normal',
+                      textAlign: 'center',
+                      wordBreak: 'break-word',
+                      boxSizing: 'border-box',
+                    }}
+                  >
                     <span>{currentEra.routeLabel}</span>
-                    <div className="btn-icon-circle">
+                    <div className="btn-icon-circle" style={{ flexShrink: 0 }}>
                       <ArrowRight size={15} />
                     </div>
                   </Link>
-                  <Link href="/about" className="btn btn-outline-gold">
+                  <Link
+                    href="/about"
+                    className="btn btn-outline-gold"
+                    style={{
+                      width: '100%',
+                      justifyContent: 'center',
+                      padding: '12px 16px',
+                      whiteSpace: 'normal',
+                      textAlign: 'center',
+                      wordBreak: 'break-word',
+                      boxSizing: 'border-box',
+                    }}
+                  >
                     <span>Full Company Story</span>
-                    <div className="btn-icon-circle">
+                    <div className="btn-icon-circle" style={{ flexShrink: 0 }}>
                       <ArrowRight size={15} />
                     </div>
                   </Link>
